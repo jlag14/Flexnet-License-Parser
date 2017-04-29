@@ -12,7 +12,7 @@ using Microsoft.Win32;
 using System.Collections;
 using System.Xml;
 
-namespace LicenseCleaner
+namespace LicenseParser
 {
     public partial class Form1 : Form
     {
@@ -27,7 +27,7 @@ namespace LicenseCleaner
         private ArrayList badLineLocations = new ArrayList();
         private ArrayList reservedWords = new ArrayList() { "SERVER", "USE_SERVER", "VENDOR" };
         public static Parser Pars = new Parser();
-        LicenseCleaner cleaner = new LicenseCleaner();
+        LicenseParser cleaner = new LicenseParser();
 
         public Form1()
         {

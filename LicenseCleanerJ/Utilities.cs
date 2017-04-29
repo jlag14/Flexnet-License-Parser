@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Collections;
 
-namespace LicenseCleaner
+namespace LicenseParser
 {
     public static class Utilities
     {
@@ -16,7 +16,7 @@ namespace LicenseCleaner
                 dest += ar[index].ToString() + Environment.NewLine;
                 index++;
             }
-            LicenseCleaner.newIndex = index;
+            LicenseParser.newIndex = index;
             return dest;
         }
     }

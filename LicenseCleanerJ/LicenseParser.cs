@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Collections;
 
-namespace LicenseCleaner
+namespace LicenseParser
 {
-    public class LicenseCleaner
+    public class LicenseParser
     {
         public static int newIndex = 0;
         public ArrayList CleanedLic(ArrayList parsedFile)

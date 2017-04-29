@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace LicenseCleaner
+namespace LicenseParser
 {
      // Represents a single software "license." A license has a name and a feature code.
     public class License

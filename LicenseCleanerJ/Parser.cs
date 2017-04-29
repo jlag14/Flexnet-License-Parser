@@ -5,7 +5,7 @@ using System.Text;
 using System.Collections;
 using System.Xml;
 
-namespace LicenseCleaner
+namespace LicenseParser
 {
     public class Parser
     {

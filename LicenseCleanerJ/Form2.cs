@@ -10,7 +10,7 @@ using System.IO;
 using Microsoft.Win32;
 using System.Collections;
 
-namespace LicenseCleaner
+namespace LicenseParser
 {
     public partial class Form2 : Form
     {
