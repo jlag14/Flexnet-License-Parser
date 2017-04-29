@@ -63,7 +63,7 @@ namespace LicenseParser
             saveDialog.DefaultExt = "lic";
             saveDialog.AddExtension = true;
             saveDialog.FileName = "Cleaned_" + licenseFileName;
-            saveDialog.InitialDirectory = @"C:\Users\Joe Lagnese\Documents\";
+            saveDialog.InitialDirectory = Environment.SpecialFolder.UserProfile + "\\Documents\\";
             saveDialog.OverwritePrompt = true;
             saveDialog.Title = "License Cleaner";
             saveDialog.ValidateNames = true;
