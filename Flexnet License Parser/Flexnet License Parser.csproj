@@ -101,7 +101,7 @@
     </Compile>
     <Compile Include="License.cs" />
     <Compile Include="LicenseChunk.cs" />
-    <Compile Include="LicenseCleaner.cs" />
+    <Compile Include="LicenseParser.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
