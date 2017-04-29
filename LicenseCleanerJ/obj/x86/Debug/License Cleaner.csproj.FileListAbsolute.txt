@@ -1,0 +1,27 @@
+C:\Users\jlagnese\Documents\LicenseCleanerJ\LicenseCleanerJ\bin\Debug\LicenseCleaner.exe.manifest
+C:\Users\jlagnese\Documents\LicenseCleanerJ\LicenseCleanerJ\bin\Debug\LicenseCleaner.application
+C:\Users\jlagnese\Documents\LicenseCleanerJ\LicenseCleanerJ\bin\Debug\LicenseCleaner.exe
+C:\Users\jlagnese\Documents\LicenseCleanerJ\LicenseCleanerJ\bin\Debug\LicenseCleaner.pdb
+C:\Users\jlagnese\Documents\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.Form1.resources
+C:\Users\jlagnese\Documents\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.Form2.resources
+C:\Users\jlagnese\Documents\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.Properties.Resources.resources
+C:\Users\jlagnese\Documents\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\License Cleaner.csproj.GenerateResource.Cache
+C:\Users\jlagnese\Documents\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.TrustInfo.xml
+C:\Users\jlagnese\Documents\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.exe.manifest
+C:\Users\jlagnese\Documents\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.application
+C:\Users\jlagnese\Documents\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.exe
+C:\Users\jlagnese\Documents\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.pdb
+C:\Users\jlagnese\Documents\CMSC 447\LicenseCleanerJ\LicenseCleanerJ\bin\Debug\LicenseCleaner.exe.manifest
+C:\Users\jlagnese\Documents\CMSC 447\LicenseCleanerJ\LicenseCleanerJ\bin\Debug\LicenseCleaner.application
+C:\Users\jlagnese\Documents\CMSC 447\LicenseCleanerJ\LicenseCleanerJ\bin\Debug\LicenseCleaner.exe
+C:\Users\jlagnese\Documents\CMSC 447\LicenseCleanerJ\LicenseCleanerJ\bin\Debug\LicenseCleaner.pdb
+C:\Users\jlagnese\Documents\CMSC 447\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\License Cleaner.csprojResolveAssemblyReference.cache
+C:\Users\jlagnese\Documents\CMSC 447\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.Form1.resources
+C:\Users\jlagnese\Documents\CMSC 447\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.Form2.resources
+C:\Users\jlagnese\Documents\CMSC 447\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.Properties.Resources.resources
+C:\Users\jlagnese\Documents\CMSC 447\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\License Cleaner.csproj.GenerateResource.Cache
+C:\Users\jlagnese\Documents\CMSC 447\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.TrustInfo.xml
+C:\Users\jlagnese\Documents\CMSC 447\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.exe.manifest
+C:\Users\jlagnese\Documents\CMSC 447\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.application
+C:\Users\jlagnese\Documents\CMSC 447\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.exe
+C:\Users\jlagnese\Documents\CMSC 447\LicenseCleanerJ\LicenseCleanerJ\obj\x86\Debug\LicenseCleaner.pdb
