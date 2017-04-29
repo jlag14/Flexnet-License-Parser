@@ -4096,4 +4096,1569 @@
     <FeatureCode>SHOWPRO_F_S</FeatureCode>
     <ProductName>Autodesk Showcase Professional 2014</ProductName>
   </Product>
+  <Product/>
+	<Product>
+		<ProductName>Autodesk 3ds Max 2017</ProductName>
+		<FeatureCode>866333DSMAX_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk 3ds Max 2017 with SoftImage</ProductName>
+		<FeatureCode>866223DSMXS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Advance Concrete 2017</ProductName>
+		<FeatureCode>86616ADSTCP_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Advance Steel 2017</ProductName>
+		<FeatureCode>86612ADSTPR_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Advance Steel 2017 with AutoCAD</ProductName>
+		<FeatureCode>86614ASPACD_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias AutoStudio 2017</ProductName>
+		<FeatureCode>86642ALAUST_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias Concept 2017</ProductName>
+		<FeatureCode>86641ALSCPT_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias Design 2017</ProductName>
+		<FeatureCode>86638DESNST_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias SpeedForm 2017</ProductName>
+		<FeatureCode>86737ALSSF_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias Surface 2017</ProductName>
+		<FeatureCode>86637SURFST_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias TC Integrator for GM 2017</ProductName>
+		<FeatureCode>86640ATCIGM_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Architecture Engineering and Construction Suite 2017</ProductName>
+		<FeatureCode>86786AECS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD 2017</ProductName>
+		<FeatureCode>86604ACD_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD 2017 for Mac</ProductName>
+		<FeatureCode>86711ACDMAC_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Architecture 2017</ProductName>
+		<FeatureCode>86480ARCHDESK_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Civil 3D 2017</ProductName>
+		<FeatureCode>86718CIV3D_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Design Suite Premium 2017</ProductName>
+		<FeatureCode>86685DSPRM_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Design Suite Standard 2017</ProductName>
+		<FeatureCode>86683DSSTD_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Design Suite Ultimate 2017</ProductName>
+		<FeatureCode>86687DSADV_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Electrical 2017</ProductName>
+		<FeatureCode>86635ACAD_E_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Inventor LT Suite 2017</ProductName>
+		<FeatureCode>86746INVLTS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD LT 2017</ProductName>
+		<FeatureCode>86604ACDLT_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD LT Civil Suite 2017</ProductName>
+		<FeatureCode>86723ACDLTC_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Map 3D 2017</ProductName>
+		<FeatureCode>86719MAP_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Mechanical 2017</ProductName>
+		<FeatureCode>86627AMECH_PP_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD MEP 2017</ProductName>
+		<FeatureCode>86631BLDSYS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD P&amp;ID 2017</ProductName>
+		<FeatureCode>86648PNID_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Plant 3D 2017</ProductName>
+		<FeatureCode>86650PLNT3D_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Raster Design 2017</ProductName>
+		<FeatureCode>86606ARDES_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Revit LT Suite 2017</ProductName>
+		<FeatureCode>86717RVTLTS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Utility Design 2017</ProductName>
+		<FeatureCode>86720UTLDESN_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Building Design Suite Premium 2017</ProductName>
+		<FeatureCode>86696BDSPRM_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Building Design Suite Standard 2017</ProductName>
+		<FeatureCode>86695BDSS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Building Design Suite Ultimate 2017</ProductName>
+		<FeatureCode>86697BDSADV_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk CFD 2017</ProductName>
+		<FeatureCode>86804SCFD_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk CFD 2017 Advanced</ProductName>
+		<FeatureCode>86805SCFDA_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk CFD 2017 Design Study Environment</ProductName>
+		<FeatureCode>86806SCDSE_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk CFD 2017 Motion</ProductName>
+		<FeatureCode>86807SCFDM_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Dynamo Studio 2017</ProductName>
+		<FeatureCode>86822DYNSTD_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication CADmep 2017</ProductName>
+		<FeatureCode>86777CADMEP_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication CAMduct 2017</ProductName>
+		<FeatureCode>86776CAMDCT_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication ESTmep 2017</ProductName>
+		<FeatureCode>86775ESTMEP_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Factory Design Suite Premium 2017</ProductName>
+		<FeatureCode>86694FDSPRM_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Factory Design Suite Standard 2017</ProductName>
+		<FeatureCode>86693FDSS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Factory Design Suite Ultimate 2017</ProductName>
+		<FeatureCode>86692FDSADV_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Factory Design Utilities 2017</ProductName>
+		<FeatureCode>86691FDU_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk GM CAD Convertors 2017</ProductName>
+		<FeatureCode>86639GMCADC_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Helius Composite 2017</ProductName>
+		<FeatureCode>86662ACMPDS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Helius PFA 2017</ProductName>
+		<FeatureCode>86660ACMPAN_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Infrastructure Design Suite Premium 2017</ProductName>
+		<FeatureCode>86702IDSP_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Infrastructure Design Suite Standard 2017</ProductName>
+		<FeatureCode>86700IDSS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Infrastructure Design Suite Ultimate 2017</ProductName>
+		<FeatureCode>86704IDSU_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Infrastructure Map Server 2017</ProductName>
+		<FeatureCode>86721IMS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Infrastructure Map Server 5 Activations 2017</ProductName>
+		<FeatureCode>86722IMS5A_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk InfraWorks 360 - Design Bundle Plus</ProductName>
+		<FeatureCode>86698IW360DBP_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk InfraWorks 360 2017</ProductName>
+		<FeatureCode>86762IW360P_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor 2017</ProductName>
+		<FeatureCode>86608INVNTOR_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor Engineer-to-Order 2017 - Developer</ProductName>
+		<FeatureCode>86733IETODEV_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor Engineer-to-Order 2017 - Distribution</ProductName>
+		<FeatureCode>86734IETODIS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor Engineer-to-Order 2017 - Server</ProductName>
+		<FeatureCode>86735IETOSRV_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor Engineer-to-Order Series 2017</ProductName>
+		<FeatureCode>86736INVETO_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor Engineer-to-Order Server 2017</ProductName>
+		<FeatureCode>86732INTSER_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor HSM 2017</ProductName>
+		<FeatureCode>86744INVHSM_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor HSM Pro 2017</ProductName>
+		<FeatureCode>86745INHSMP_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor LT 2017</ProductName>
+		<FeatureCode>86610INVLT_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor OEM 2017</ProductName>
+		<FeatureCode>86611INVOEM_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor Professional 2017</ProductName>
+		<FeatureCode>86609INVPROSA_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Maya 2017</ProductName>
+		<FeatureCode>86618MAYA_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Media and Entertainment Suite 2017</ProductName>
+		<FeatureCode>86788MES_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Memento</ProductName>
+		<FeatureCode>86812MMNTO_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk MEP Fabrication Suite 2017</ProductName>
+		<FeatureCode>86790MEPCS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Adviser Premium 2017</ProductName>
+		<FeatureCode>86749MFAM_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Adviser Standard 2017</ProductName>
+		<FeatureCode>86748MFAD_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Adviser Ultimate 2017</ProductName>
+		<FeatureCode>86750MFAA_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Design 2017</ProductName>
+		<FeatureCode>86755SIMDFM_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Insight Premium 2017</ProductName>
+		<FeatureCode>86752MFIP_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Insight Standard 2017</ProductName>
+		<FeatureCode>86751MFIB_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Insight Ultimate 2017</ProductName>
+		<FeatureCode>86753MFIA_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Synergy 2017</ProductName>
+		<FeatureCode>86754MFS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk MotionBuilder 2017</ProductName>
+		<FeatureCode>86623MOBPRO_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Mudbox 2017</ProductName>
+		<FeatureCode>86624MBXPRO_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Nastran 2017</ProductName>
+		<FeatureCode>86659NSTRN_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Nastran In-CAD 2017</ProductName>
+		<FeatureCode>86659NINCAD_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Navisworks Manage 2017</ProductName>
+		<FeatureCode>86766NAVMAN_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Navisworks Simulate 2017</ProductName>
+		<FeatureCode>86767NAVSIM_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Plant Design Suite Premium 2017</ProductName>
+		<FeatureCode>86652PDSPRM_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Plant Design Suite Standard 2017</ProductName>
+		<FeatureCode>86654PLTDSS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Plant Design Suite Ultimate 2017</ProductName>
+		<FeatureCode>86656PDSADV_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Point Layout 2017</ProductName>
+		<FeatureCode>86725PNTLAY_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Product Design Suite Premium 2017</ProductName>
+		<FeatureCode>86690PDSP_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Product Design Suite Ultimate 2017</ProductName>
+		<FeatureCode>86689PDSU_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk ReCap 360 Pro</ProductName>
+		<FeatureCode>86747RECAP_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Revit 2017</ProductName>
+		<FeatureCode>86706RVT_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Revit Collaboration Suite 2017</ProductName>
+		<FeatureCode>86716CONCRD_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Revit LT 2017</ProductName>
+		<FeatureCode>86707RVTLT_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Robot Structural Analysis Professional 2017</ProductName>
+		<FeatureCode>86659RSAPRO_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Showcase 2017</ProductName>
+		<FeatureCode>86803SHOWCASE_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk SimStudio Tools 2016 R2</ProductName>
+		<FeatureCode>86802PLC0000023_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation Mechanical 2017</ProductName>
+		<FeatureCode>86757ASMES_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Smoke Desktop Subscription 2017</ProductName>
+		<FeatureCode>86761SMKDS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Stingray 2017</ProductName>
+		<FeatureCode>86810STNGRAY_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Structural Bridge Design 2017</ProductName>
+		<FeatureCode>86792SBRDES_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Structural Fabrication Suite 2017</ProductName>
+		<FeatureCode>86791SFS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Studio Wall 2017</ProductName>
+		<FeatureCode>86738STUWAL_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk TruComp 2017</ProductName>
+		<FeatureCode>86782TRUCOM_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk TruLaser 2017</ProductName>
+		<FeatureCode>86743TRULSR_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk TruNest 2017 - Nesting Engine</ProductName>
+		<FeatureCode>86781TRUNST_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk TruNest Composites 2017</ProductName>
+		<FeatureCode>86780TNCOMP_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk TruNest Contour 2017</ProductName>
+		<FeatureCode>86779TNCONT_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk TruNest Multi-Tool 2017</ProductName>
+		<FeatureCode>86778TNMULT_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk TruPlan 2017</ProductName>
+		<FeatureCode>86809TRUPLN_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Vault Office 2017</ProductName>
+		<FeatureCode>86645PCOFFI_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Vault Professional 2017</ProductName>
+		<FeatureCode>86646VLTM_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Vault Workgroup 2017</ProductName>
+		<FeatureCode>86647VLTWG_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Vehicle Tracking 2017</ProductName>
+		<FeatureCode>86726VEHTRK_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED 2017</ProductName>
+		<FeatureCode>86768ADKVRD_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED Design 2017</ProductName>
+		<FeatureCode>86769VRDDES_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED Presenter 2017</ProductName>
+		<FeatureCode>86770VRDPRS_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED Professional 2017</ProductName>
+		<FeatureCode>86771VRDPRO_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED Render Node - consumption-based license 2017</ProductName>
+		<FeatureCode>86772VRNCBL_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED Render Node 2017</ProductName>
+		<FeatureCode>86773RCMVRD_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED Server 2017</ProductName>
+		<FeatureCode>86774VRDSRV_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>CADdoctor for Autodesk Simulation 2017</ProductName>
+		<FeatureCode>86756MFCD_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Enterprise Multi-Flex Enhanced Bundle 2017</ProductName>
+		<FeatureCode>86818EMFEB_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>T1 Enterprise Multi-flex 2017</ProductName>
+		<FeatureCode>86816T1MF_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>T1 Enterprise Multi-flex Standard Bundle 2017</ProductName>
+		<FeatureCode>86817T1MFSB_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>T1 Enterprise Multi-Flex Standard Prior Version Bundle 2017</ProductName>
+		<FeatureCode>86819T1MFPB_2017_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk 3ds Max 2015</ProductName>
+		<FeatureCode>862623DSMAX_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk 3ds Max Design 2015</ProductName>
+		<FeatureCode>86263MAXDES_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk 3ds Max Entertainment Creation Suite Premium 2015</ProductName>
+		<FeatureCode>86241MXECSP_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk 3ds Max Entertainment Creation Suite Standard 2015</ProductName>
+		<FeatureCode>86242MXECS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk 3ds Max with SoftImage 2015</ProductName>
+		<FeatureCode>863983DSMXS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Advance Concrete 2015</ProductName>
+		<FeatureCode>86373ADSTCP_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Advance Steel 2015</ProductName>
+		<FeatureCode>86375ADSTPR_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Advance Steel 2015 with AutoCAD</ProductName>
+		<FeatureCode>86381ASPACD_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias Automotive 2015</ProductName>
+		<FeatureCode>86221AUTOST_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias AutoStudio 2015</ProductName>
+		<FeatureCode>86371ALAUST_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias Design 2015</ProductName>
+		<FeatureCode>86222DESNST_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias Surface 2015</ProductName>
+		<FeatureCode>86223SURFST_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD 2015</ProductName>
+		<FeatureCode>86295ACD_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Architecture 2015</ProductName>
+		<FeatureCode>86288ARCHDESK_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Civil 3D 2015</ProductName>
+		<FeatureCode>86354CIV3D_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Design Suite Premium 2015</ProductName>
+		<FeatureCode>86227DSPRM_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Design Suite Standard 2015</ProductName>
+		<FeatureCode>86228DSSTD_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Design Suite Ultimate 2015</ProductName>
+		<FeatureCode>86229DSADV_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Electrical 2015</ProductName>
+		<FeatureCode>86290ACAD_E_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Inventor LT Suite 2015</ProductName>
+		<FeatureCode>86233INVLTS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD LT 2015</ProductName>
+		<FeatureCode>86293ACDLT_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD LT Civil Suite 2015</ProductName>
+		<FeatureCode>86232ACDLTC_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Map 3D 2015</ProductName>
+		<FeatureCode>86355MAP_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Mechanical 2015</ProductName>
+		<FeatureCode>86279AMECH_PP_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD MEP 2015</ProductName>
+		<FeatureCode>86292BLDSYS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD P&amp;ID 2015</ProductName>
+		<FeatureCode>86301PNID_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Plant 3D 2015</ProductName>
+		<FeatureCode>86296PLNT3D_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Raster Design 2015</ProductName>
+		<FeatureCode>86294ARDES_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Revit LT Suite 2015</ProductName>
+		<FeatureCode>86235RVTLTS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Structural Detailing 2015</ProductName>
+		<FeatureCode>86280STRDET_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Utility Design 2015</ProductName>
+		<FeatureCode>86356UTLDESN_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Bridge Module 2015</ProductName>
+		<FeatureCode>86419BRDGMD_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Building Design Suite Premium 2015</ProductName>
+		<FeatureCode>86238BDSPRM_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Building Design Suite Standard 2015</ProductName>
+		<FeatureCode>86244BDSS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Building Design Suite Ultimate 2015</ProductName>
+		<FeatureCode>86245BDSADV_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Display Cluster Module for Autodesk VRED Design 2015</ProductName>
+		<FeatureCode>86383DCMVRD_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Education Master Suite 2015</ProductName>
+		<FeatureCode>86247EMS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Entertainment Creation Suite For Education 2015</ProductName>
+		<FeatureCode>86248ESEC_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Entertainment Creation Suite Ultimate 2015</ProductName>
+		<FeatureCode>86243ENCSU_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication CADmep 2015</ProductName>
+		<FeatureCode>86281CADMEP_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication CAMduct 2015</ProductName>
+		<FeatureCode>86283CAMDCT_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication CAMduct Components 2015</ProductName>
+		<FeatureCode>86284CAMLTE_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication ESTmep 2015</ProductName>
+		<FeatureCode>86285ESTMEP_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication RemoteEntry 2015</ProductName>
+		<FeatureCode>86286RMNTRY_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication Tracker 2015</ProductName>
+		<FeatureCode>86287TRCKIT_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Factory Design Suite Premium 2015</ProductName>
+		<FeatureCode>86249FDSPRM_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Factory Design Suite Standard 2015</ProductName>
+		<FeatureCode>86250FDSS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Factory Design Suite Ultimate 2015</ProductName>
+		<FeatureCode>86251FDSADV_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Geotechnical Module 2015</ProductName>
+		<FeatureCode>86421GEOMOD_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk HSMWorks Premium 2015</ProductName>
+		<FeatureCode>86404HSMPRM_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk HSMWorks Professional 2015</ProductName>
+		<FeatureCode>86406HSMPRO_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Infrastructure Design Suite Premium 2015</ProductName>
+		<FeatureCode>86252IDSP_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Infrastructure Design Suite Standard 2015</ProductName>
+		<FeatureCode>86253IDSS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Infrastructure Design Suite Ultimate 2015</ProductName>
+		<FeatureCode>86254IDSU_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk InfraWorks 2015</ProductName>
+		<FeatureCode>86359INFMDR_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk InfraWorks 360 - companion 2015</ProductName>
+		<FeatureCode>86396IW360C_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk InfraWorks 360 2015</ProductName>
+		<FeatureCode>86390IW360P_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor 2015</ProductName>
+		<FeatureCode>86314INVNTOR_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor Engineer-to-Order Series 2015</ProductName>
+		<FeatureCode>86255INVETO_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor Engineer-to-Order Server 2015</ProductName>
+		<FeatureCode>86315INTSER_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor HSM 2015</ProductName>
+		<FeatureCode>86392INVHSM_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor HSM Pro 2015</ProductName>
+		<FeatureCode>86394INHSMP_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor LT 2015</ProductName>
+		<FeatureCode>86316INVLT_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor OEM 2015</ProductName>
+		<FeatureCode>86317INVOEM_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor Professional 2015</ProductName>
+		<FeatureCode>86318INVPROSA_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Maya 2015</ProductName>
+		<FeatureCode>86213MAYA_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Maya Entertainment Creation Suite Standard 2015</ProductName>
+		<FeatureCode>86257MYECS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Maya with SoftImage 2015</ProductName>
+		<FeatureCode>86400MAYAS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk MotionBuilder 2015</ProductName>
+		<FeatureCode>86264MOBPRO_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Mudbox 2015</ProductName>
+		<FeatureCode>86265MBXPRO_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Navisworks Manage 2015</ProductName>
+		<FeatureCode>86350NAVMAN_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Navisworks Simulate 2015</ProductName>
+		<FeatureCode>86351NAVSIM_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Plant Design Suite Premium 2015</ProductName>
+		<FeatureCode>86258PDSPRM_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Plant Design Suite Standard 2015</ProductName>
+		<FeatureCode>86259PLTDSS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Plant Design Suite Ultimate 2015</ProductName>
+		<FeatureCode>86260PDSADV_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Point Layout 2015</ProductName>
+		<FeatureCode>86384PNTLAY_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Product Design Suite for Education 2015</ProductName>
+		<FeatureCode>86261ESME_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Product Design Suite Premium 2015</ProductName>
+		<FeatureCode>86266PDSP_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Product Design Suite Standard 2015</ProductName>
+		<FeatureCode>86267PDSS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Product Design Suite Ultimate 2015</ProductName>
+		<FeatureCode>86268PDSU_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Raytracing Cluster Module for Autodesk VRED 2015</ProductName>
+		<FeatureCode>86386RCMVRD_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk ReCap 2015</ProductName>
+		<FeatureCode>86402RECAP_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Revit 2015</ProductName>
+		<FeatureCode>86273RVT_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Revit Architecture 2015</ProductName>
+		<FeatureCode>86274REVIT_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Revit LT 2015</ProductName>
+		<FeatureCode>86275RVTLT_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Revit MEP 2015</ProductName>
+		<FeatureCode>86276RVTMPB_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Revit Structure 2015</ProductName>
+		<FeatureCode>86277REVITST_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk River and Flood Analysis Module 2015</ProductName>
+		<FeatureCode>86423RFAMOD_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Robot Structural Analysis Professional 2015</ProductName>
+		<FeatureCode>86297RSAPRO_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Showcase 2015</ProductName>
+		<FeatureCode>86369SHOWCASE_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation CFD 2015</ProductName>
+		<FeatureCode>86336SCFD_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation CFD 2015 Advanced</ProductName>
+		<FeatureCode>86337SCFDA_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation CFD 2015 Connection for ACIS</ProductName>
+		<FeatureCode>86338SCACIS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation CFD 2015 Connection for NX</ProductName>
+		<FeatureCode>86339SCFDNX_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation CFD 2015 Connection for Parasolid</ProductName>
+		<FeatureCode>86340SCFDP_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation CFD 2015 Connection for Pro/E</ProductName>
+		<FeatureCode>86341SCPROE_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation CFD 2015 Design Study Environment</ProductName>
+		<FeatureCode>86342SCDSE_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation CFD 2015 Motion</ProductName>
+		<FeatureCode>86343SCFDM_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation Composite Analysis 2015</ProductName>
+		<FeatureCode>86344ACMPAN_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation Composite Design 2015</ProductName>
+		<FeatureCode>86346ACMPDS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation DFM 2015</ProductName>
+		<FeatureCode>86319SIMDFM_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation Mechanical 2015</ProductName>
+		<FeatureCode>86348ASMES_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation Moldflow Adviser Premium 2015</ProductName>
+		<FeatureCode>86320MFAM_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation Moldflow Adviser Standard 2015</ProductName>
+		<FeatureCode>86321MFAD_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation Moldflow Adviser Ultimate 2015</ProductName>
+		<FeatureCode>86322MFAA_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation Moldflow Insight Premium 2015</ProductName>
+		<FeatureCode>86323MFIP_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation Moldflow Insight Standard 2015</ProductName>
+		<FeatureCode>86324MFIB_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation Moldflow Insight Ultimate 2015</ProductName>
+		<FeatureCode>86325MFIA_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation Moldflow Synergy 2015</ProductName>
+		<FeatureCode>86326MFS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk SketchBook Pro 2015</ProductName>
+		<FeatureCode>86352SBPNL_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Smoke 2015 for Mac OS X</ProductName>
+		<FeatureCode>86377SMKMAC_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Softimage 2015</ProductName>
+		<FeatureCode>86269SFTIM_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Softimage Entertainment Creation Suite Standard 2015</ProductName>
+		<FeatureCode>86270SIECS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Vault Office 2015</ProductName>
+		<FeatureCode>86304PCOFFI_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Vault Professional 2015</ProductName>
+		<FeatureCode>86305VLTM_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Vault Workgroup 2015</ProductName>
+		<FeatureCode>86306VLTWG_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Vehicle Tracking 2015</ProductName>
+		<FeatureCode>86388VEHTRK_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED 2015</ProductName>
+		<FeatureCode>86379ADKVRD_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED Design 2015</ProductName>
+		<FeatureCode>86378VRDDES_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED Presenter 2015</ProductName>
+		<FeatureCode>86366VRDPRS_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED Professional 2015</ProductName>
+		<FeatureCode>86367VRDPRO_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED Server 2015</ProductName>
+		<FeatureCode>86380VRDSRV_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>CADdoctor for Autodesk Simulation 2015</ProductName>
+		<FeatureCode>86327MFCD_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Enterprise Multi-Flex Enhanced Bundle 2015</ProductName>
+		<FeatureCode>86417EMFEB_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>mental ray Standalone 2015</ProductName>
+		<FeatureCode>86271MRSTND_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>T1 Enterprise Multi-flex 2015</ProductName>
+		<FeatureCode>86408T1MF_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>T1 Enterprise Multi-flex Prior Version 2015</ProductName>
+		<FeatureCode>86412T1MFPV_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>T1 Enterprise Multi-flex Standard Bundle 2015</ProductName>
+		<FeatureCode>86414T1MFSB_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>T1 Enterprise Multi-Flex Standard Prior Version Bundle 2015</ProductName>
+		<FeatureCode>86416T1MFPB_2015_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk 3ds Max 2016</ProductName>
+		<FeatureCode>864713DSMAX_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk 3ds Max Entertainment Creation Suite Standard 2016</ProductName>
+		<FeatureCode>86464MXECS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk 3ds Max with SoftImage 2016</ProductName>
+		<FeatureCode>864733DSMXS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Advance Concrete 2016</ProductName>
+		<FeatureCode>86515ADSTCP_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Advance Steel 2016</ProductName>
+		<FeatureCode>86507ADSTPR_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Advance Steel 2016 with AutoCAD</ProductName>
+		<FeatureCode>86506ASPACD_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias AutoStudio 2016</ProductName>
+		<FeatureCode>86427ALAUST_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias Concept 2016</ProductName>
+		<FeatureCode>86581ALSCPT_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias Design 2016</ProductName>
+		<FeatureCode>86428DESNST_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias SpeedForm 2016</ProductName>
+		<FeatureCode>86581ALSSF_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias Surface 2016</ProductName>
+		<FeatureCode>86429SURFST_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Alias TC Integrator for GM 2016</ProductName>
+		<FeatureCode>86430ATCIGM_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD 2016</ProductName>
+		<FeatureCode>86445ACD_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD 2016 for Mac</ProductName>
+		<FeatureCode>86511ACDMAC_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Architecture 2016</ProductName>
+		<FeatureCode>86480ARCHDESK_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Civil 3D 2016</ProductName>
+		<FeatureCode>86514CIV3D_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Design Suite Premium 2016</ProductName>
+		<FeatureCode>86444DSPRM_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Design Suite Standard 2016</ProductName>
+		<FeatureCode>86446DSSTD_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Design Suite Ultimate 2016</ProductName>
+		<FeatureCode>86432DSADV_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Electrical 2016</ProductName>
+		<FeatureCode>86481ACAD_E_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Inventor LT Suite 2016</ProductName>
+		<FeatureCode>86485INVLTS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD LT 2016</ProductName>
+		<FeatureCode>86447ACDLT_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD LT 2016 Flexible License</ProductName>
+		<FeatureCode>86448ACLTNL_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD LT 2016 for Mac</ProductName>
+		<FeatureCode>86512ACDLTM_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD LT Civil Suite 2016</ProductName>
+		<FeatureCode>86513ACDLTC_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Map 3D 2016</ProductName>
+		<FeatureCode>86517MAP_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Mechanical 2016</ProductName>
+		<FeatureCode>86478AMECH_PP_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD MEP 2016</ProductName>
+		<FeatureCode>86479BLDSYS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD P&amp;ID 2016</ProductName>
+		<FeatureCode>86517PNID_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Plant 3D 2016</ProductName>
+		<FeatureCode>86517PLNT3D_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Raster Design 2016</ProductName>
+		<FeatureCode>86474ARDES_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Revit Architecture Suite 2016</ProductName>
+		<FeatureCode>86465REVITS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Revit LT Suite 2016</ProductName>
+		<FeatureCode>86449RVTLTS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Revit MEP Suite 2016</ProductName>
+		<FeatureCode>86466REVSYP_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Revit Structure Suite 2016</ProductName>
+		<FeatureCode>86467REVSU_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk AutoCAD Utility Design 2016</ProductName>
+		<FeatureCode>86517UTLDESN_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Building Design Suite Premium 2016</ProductName>
+		<FeatureCode>86451BDSPRM_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Building Design Suite Standard 2016</ProductName>
+		<FeatureCode>86452BDSS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Building Design Suite Ultimate 2016</ProductName>
+		<FeatureCode>86443BDSADV_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk CFD 2016</ProductName>
+		<FeatureCode>86540SCFD_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk CFD 2016 Advanced</ProductName>
+		<FeatureCode>86541SCFDA_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk CFD 2016 Connection for NX</ProductName>
+		<FeatureCode>86543SCFDNX_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk CFD 2016 Connection for Parasolid</ProductName>
+		<FeatureCode>86544SCFDP_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk CFD 2016 Connection for Pro ENGINEER</ProductName>
+		<FeatureCode>86545SCPROE_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk CFD 2016 Design Study Environment</ProductName>
+		<FeatureCode>86546SCDSE_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk CFD 2016 Motion</ProductName>
+		<FeatureCode>86547SCFDM_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Display Cluster Module for Autodesk VRED Design 2016</ProductName>
+		<FeatureCode>86518DCMVRD_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Dynamo Studio 2016</ProductName>
+		<FeatureCode>86643DYNSTD_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Entertainment Creation Suite Ultimate 2016</ProductName>
+		<FeatureCode>86435ENCSU_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication CADmep 2016</ProductName>
+		<FeatureCode>86519CADMEP_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication CAMduct 2016</ProductName>
+		<FeatureCode>86520CAMDCT_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication CAMduct Components 2016</ProductName>
+		<FeatureCode>86521CAMLTE_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication ESTmep 2016</ProductName>
+		<FeatureCode>86522ESTMEP_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication RemoteEntry 2016</ProductName>
+		<FeatureCode>86523RMNTRY_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Fabrication Tracker 2016</ProductName>
+		<FeatureCode>86524TRCKIT_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Factory Design Suite Premium 2016</ProductName>
+		<FeatureCode>86475FDSPRM_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Factory Design Suite Standard 2016</ProductName>
+		<FeatureCode>86502FDSS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Factory Design Suite Ultimate 2016</ProductName>
+		<FeatureCode>86476FDSADV_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Factory Design Utilities 2016</ProductName>
+		<FeatureCode>86491FDU_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk GM CAD Convertors 2016</ProductName>
+		<FeatureCode>86436GMCADC_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Helius Composite 2016</ProductName>
+		<FeatureCode>86549ACMPDS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Helius PFA 2016</ProductName>
+		<FeatureCode>86548ACMPAN_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk HSMWorks Premium 2016</ProductName>
+		<FeatureCode>86525HSMPRM_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk HSMWorks Professional 2016</ProductName>
+		<FeatureCode>86526HSMPRO_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Infrastructure Design Suite Premium 2016</ProductName>
+		<FeatureCode>86468IDSP_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Infrastructure Design Suite Standard 2016</ProductName>
+		<FeatureCode>86508IDSS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Infrastructure Design Suite Ultimate 2016</ProductName>
+		<FeatureCode>86442IDSU_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk InfraWorks 2016</ProductName>
+		<FeatureCode>86529INFMDR_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk InfraWorks 360 - companion 2016</ProductName>
+		<FeatureCode>86530IW360C_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk InfraWorks 360 2016</ProductName>
+		<FeatureCode>86531IW360P_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk InfraWorks bundle – Roads &amp; Highways 2016</ProductName>
+		<FeatureCode>86532IMRH_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor 2016</ProductName>
+		<FeatureCode>86492INVNTOR_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor Engineer-to-Order 2016 - Distribution</ProductName>
+		<FeatureCode>86593IETODIS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor Engineer-to-Order Series 2016</ProductName>
+		<FeatureCode>86503INVETO_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor Engineer-to-Order Server 2016</ProductName>
+		<FeatureCode>86487INTSER_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor HSM 2016</ProductName>
+		<FeatureCode>86493INVHSM_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor HSM Pro 2016</ProductName>
+		<FeatureCode>86494INHSMP_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor LT 2016</ProductName>
+		<FeatureCode>86496INVLT_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor OEM 2016</ProductName>
+		<FeatureCode>86495INVOEM_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Inventor Professional 2016</ProductName>
+		<FeatureCode>86497INVPROSA_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Maya 2016</ProductName>
+		<FeatureCode>86437MAYA_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Maya Entertainment Creation Suite Standard 2016</ProductName>
+		<FeatureCode>86438MYECS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Maya with SoftImage 2016</ProductName>
+		<FeatureCode>86441MAYAS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Turtle for Maya 2016</ProductName>
+		<FeatureCode>86437TRTLPB_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Adviser Premium 2016</ProductName>
+		<FeatureCode>86552MFAM_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Adviser Standard 2016</ProductName>
+		<FeatureCode>86554MFAD_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Adviser Ultimate 2016</ProductName>
+		<FeatureCode>86576MFAA_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Design 2016</ProductName>
+		<FeatureCode>86550SIMDFM_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Insight Premium 2016</ProductName>
+		<FeatureCode>86555MFIP_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Insight Standard 2016</ProductName>
+		<FeatureCode>86556MFIB_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Insight Ultimate 2016</ProductName>
+		<FeatureCode>86557MFIA_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Moldflow Synergy 2016</ProductName>
+		<FeatureCode>86558MFS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk MotionBuilder 2016</ProductName>
+		<FeatureCode>86460MOBPRO_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Mudbox 2016</ProductName>
+		<FeatureCode>86461MBXPRO_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Nastran 2016</ProductName>
+		<FeatureCode>86579NSTRN_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Nastran In-CAD 2016</ProductName>
+		<FeatureCode>86580NINCAD_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Navisworks Manage 2016</ProductName>
+		<FeatureCode>86534NAVMAN_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Navisworks Simulate 2016</ProductName>
+		<FeatureCode>86553NAVSIM_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Plant Design Suite Premium 2016</ProductName>
+		<FeatureCode>86469PDSPRM_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Plant Design Suite Standard 2016</ProductName>
+		<FeatureCode>86509PLTDSS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Plant Design Suite Ultimate 2016</ProductName>
+		<FeatureCode>86470PDSADV_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Point Layout 2016</ProductName>
+		<FeatureCode>86535PNTLAY_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Product Design Suite Premium 2016</ProductName>
+		<FeatureCode>86477PDSP_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Product Design Suite Ultimate 2016</ProductName>
+		<FeatureCode>86462PDSU_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Raytracing Cluster Module for Autodesk VRED 2016</ProductName>
+		<FeatureCode>86537RCMVRD_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk ReCap 360 Ultimate 2016</ProductName>
+		<FeatureCode>86538RECAP_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Revit 2016</ProductName>
+		<FeatureCode>86453RVT_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Revit Architecture 2016</ProductName>
+		<FeatureCode>86454REVIT_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Revit Engineer-to-Order 2016 - Distribution Package</ProductName>
+		<FeatureCode>86589RETODP_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Revit LT 2016</ProductName>
+		<FeatureCode>86455RVTLT_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Revit MEP 2016</ProductName>
+		<FeatureCode>86456RVTMPB_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Revit Structure 2016</ProductName>
+		<FeatureCode>86457REVITST_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Robot Structural Analysis Professional 2016</ProductName>
+		<FeatureCode>86439RSAPRO_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Showcase 2016</ProductName>
+		<FeatureCode>86582SHOWCASE_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation CFD 2016 Connection for ACIS</ProductName>
+		<FeatureCode>86542SCACIS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Simulation Mechanical 2016</ProductName>
+		<FeatureCode>86551ASMES_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk SketchBook Pro 2016</ProductName>
+		<FeatureCode>86440SBPNL_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Studio Wall 2016</ProductName>
+		<FeatureCode>86595STUWAL_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk T-Splines Plug-in for Rhino 2016</ProductName>
+		<FeatureCode>86561TSPRHN_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Vault Office 2016</ProductName>
+		<FeatureCode>86562PCOFFI_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Vault Professional 2016</ProductName>
+		<FeatureCode>86563VLTM_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Vault Workgroup 2016</ProductName>
+		<FeatureCode>86564VLTWG_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk Vehicle Tracking 2016</ProductName>
+		<FeatureCode>86565VEHTRK_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED 2016</ProductName>
+		<FeatureCode>86516ADKVRD_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED Design 2016</ProductName>
+		<FeatureCode>86566VRDDES_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED Presenter 2016</ProductName>
+		<FeatureCode>86567VRDPRS_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED Professional 2016</ProductName>
+		<FeatureCode>86568VRDPRO_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Autodesk VRED Server 2016</ProductName>
+		<FeatureCode>86572VRDSRV_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>CADdoctor for Autodesk Simulation 2016</ProductName>
+		<FeatureCode>86515MFCD_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>Enterprise Multi-Flex Enhanced Bundle 2016</ProductName>
+		<FeatureCode>86569EMFEB_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>mental ray Standalone 2016</ProductName>
+		<FeatureCode>86459MRSTND_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>T1 Enterprise Multi-flex 2016</ProductName>
+		<FeatureCode>86571T1MF_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>T1 Enterprise Multi-flex Prior Version 2016</ProductName>
+		<FeatureCode>86573T1MFPV_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>T1 Enterprise Multi-flex Standard Bundle 2016</ProductName>
+		<FeatureCode>86575T1MFSB_2016_0F</FeatureCode>
+	</Product>
+	<Product>
+		<ProductName>T1 Enterprise Multi-Flex Standard Prior Version Bundle 2016</ProductName>
+		<FeatureCode>86574T1MFPB_2016_0F</FeatureCode>
+	</Product>
 </ProductCodeInfo>
