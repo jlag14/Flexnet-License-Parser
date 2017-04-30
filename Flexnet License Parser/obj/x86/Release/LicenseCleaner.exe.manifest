@@ -42,24 +42,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LicenseCleaner.exe" size="48128">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LicenseCleaner.exe" size="48640">
       <assemblyIdentity name="LicenseCleaner" version="0.1.1.1" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>EFmq451hQIj0cwArhemjN8aEdl4=</dsig:DigestValue>
+        <dsig:DigestValue>thtjl5p5VCde8i1zun9QgdznYgQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="LicenseMeta.xml" size="143637" writeableType="applicationData">
+  <file name="LicenseMeta.xml" size="198630" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>YpCda6+22xkimmkjpuO58HQphX0=</dsig:DigestValue>
+      <dsig:DigestValue>/icUjw/zRgrMIPKTi6CnKsfZMR4=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

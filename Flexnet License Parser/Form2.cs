@@ -24,6 +24,8 @@ namespace LicenseParser
         public static int LeadingCommentSpace = 1;
         public static int IndentSpaces = 4;
 
+        public static string LicenseMetaXMLPath = ""; // will come back to this with default path
+
         public static bool IndentedComments = false;
         public static bool KeepComments = false;
         public static bool KeepBreaks = false;
@@ -593,6 +595,5 @@ namespace LicenseParser
         {
             this.Close();
         }
-        
     }
 }

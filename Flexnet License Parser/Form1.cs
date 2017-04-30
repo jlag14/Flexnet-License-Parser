@@ -22,9 +22,7 @@ namespace LicenseParser
         public static bool Plist = false;
         public static ArrayList printMe = new ArrayList();
         private ArrayList keepthese = new ArrayList();
-        public static ArrayList licensesFound = new ArrayList();
         private ArrayList parsedXML = new ArrayList();
-        private ArrayList badLineLocations = new ArrayList();
         private ArrayList reservedWords = new ArrayList() { "SERVER", "USE_SERVER", "VENDOR" };
         public static Parser Pars = new Parser();
         LicenseParser cleaner = new LicenseParser();
@@ -45,6 +43,7 @@ namespace LicenseParser
             OpenFileDialog openDialog = new OpenFileDialog();
             openDialog.Filter = "Text Files | *.txt|License Files | *.lic";
             openDialog.ShowDialog();
+
             if (!string.IsNullOrEmpty(openDialog.FileName))
             {
                 using (StreamReader reader = new StreamReader(openDialog.FileName))
@@ -92,11 +91,11 @@ namespace LicenseParser
                 }
                 int start = 0;
                 int pos = 0;
-                while (start * 1000 <= keepthese.Count)                                         //checks to make sure the loop will not be starting past the end of the file,
-                {                                                                               //then uses a for loop to break the ArrayList into chunks of a thousand lines each and places the chunks in a holder string. 
-                    for (pos = (start * 1000); pos < ((start + 1) * 1000); pos++)               //(The last chunk will not be 1000 lines, it will be the remainder of lines left after the other chunks.)
-                    {                                                                           //Adds a newLine character after each line as the for loop executes. After each chunk is created,
-                        if (pos < keepthese.Count)                                              //it is added to the existing text in the output TextBox and the holder string is reset.
+                while (start * 1000 <= keepthese.Count)                                     //checks to make sure the loop will not be starting past the end of the file,
+                {                                                                           //then uses a for loop to break the ArrayList into chunks of a thousand lines each and places the chunks in a holder string. 
+                    for (pos = (start * 1000); pos < ((start + 1) * 1000); pos++)           //(The last chunk will not be 1000 lines, it will be the remainder of lines left after the other chunks.)
+                    {                                                                       //Adds a newLine character after each line as the for loop executes. After each chunk is created,
+                        if (pos < keepthese.Count)                                          //it is added to the existing text in the output TextBox and the holder string is reset.
                         {
                             cleanFile += keepthese[pos] + Environment.NewLine;
                         }
@@ -107,70 +106,7 @@ namespace LicenseParser
                 }
                     displayStatus("File cleaned.");
             }
-            //if (licensesFound.Count > 0)
-            //{
-            //    cleanedFile.Text += "# The following licenses were found: ";
-            //}
-            //    foreach (License lic in licensesFound)
-            //    {
-            //        if (licensesFound.IndexOf(lic) < licensesFound.Count - 1)
-            //        {
-            //            cleanedFile.Text += lic.LicenseName;
-            //            foreach (License l in licensesFound)
-            //            {
-            //                if (lic.FeatureCode.Equals(l.FeatureCode) && licensesFound.IndexOf(lic) != licensesFound.IndexOf(l))
-            //                {
-            //                    if (!StarAdder.StarItems.Contains(lic.FeatureCode))
-            //                    {
-            //                        StarAdder.StarItems.Add(lic.FeatureCode);
-            //                    }
-            //                }
-            //            }
-            //            cleanedFile.Text += StarAdder.AddStars(lic.FeatureCode);
-            //            cleanedFile.Text += ", ";
-            //        }
-            //        else
-            //        {
-            //            cleanedFile.Text += lic.LicenseName;
-            //            foreach (License l in licensesFound)
-            //            {
-            //                if (lic.FeatureCode.Equals(l.FeatureCode) && licensesFound.IndexOf(lic) != licensesFound.IndexOf(l))
-            //                {
-            //                    if (!StarAdder.StarItems.Contains(lic.FeatureCode))
-            //                    {
-            //                        StarAdder.StarItems.Add(lic.FeatureCode);
-            //                    }
-            //                }
-            //            }
-            //            cleanedFile.Text += StarAdder.AddStars(lic.FeatureCode);
-            //            cleanedFile.Text += Environment.NewLine + Environment.NewLine;
-            //        }
-            //    }
-            //    if (licensesFound.Count > 0 && StarAdder.StarItems.Count > 0)
-            //    {
-            //        cleanedFile.Text += Environment.NewLine + "# *: License names marked with asterisks (*) represent repeated feature codes. Licenses with the same number of asterisks have the same corresponding feature code. The specific license(s) that is/are being referenced cannot be determined for these groups.";
-            //    }
-
         }
-        //DAD'S CLEAN==================================================================
-        //String[] licText = (String[])keepthese.ToArray(typeof(string));               
-        //String result = "";                                                           
-        //else
-        //{
-        //    cleanedFile.Text = "The license was deemed invalid." + Environment.NewLine;
-        //    cleanedFile.Text += "Errors were found on the following lines: ";
-        //    foreach (int location in badLineLocations)
-        //    {
-        //        cleanedFile.Text += location + ", ";
-        //    }
-        //}
-        //            cleanedFile.Text = licText.Length.ToString();
-        //foreach (String line in licText)
-        //{
-        //    result += line + Environment.NewLine;
-        //}
-
-        //cleanedFile.Text = result;
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)       //this is the "Open" item from the "File" menu
         {

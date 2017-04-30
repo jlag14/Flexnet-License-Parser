@@ -1,4 +1,4 @@
-﻿namespace LicenseCleaner
+﻿namespace LicenseParser
 {
     partial class Form1
     {

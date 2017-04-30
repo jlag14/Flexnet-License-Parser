@@ -60,7 +60,7 @@ namespace LicenseParser
                     // Add the line to our array
                     licLines.Add(line);
                     //}
-                    // Move the EOL pointer to the next start point (assume Windows /r/n or two chars
+                    // Move the EOL pointer to the next start point (assume Windows /r/n or two chars)
                     eolPtr = eolPtr + 2;
                     // Move the start pointer to the next start point
                     stPtr = eolPtr;
@@ -76,6 +76,7 @@ namespace LicenseParser
             return licLines;
         }
 
+        // PLEASE ADD FILE NOT FOUND EXCEPTION CONTROL
         public ArrayList ParseXML()
         {
             ArrayList result = new ArrayList();

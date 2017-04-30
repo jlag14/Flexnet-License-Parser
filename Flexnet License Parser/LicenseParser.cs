@@ -9,19 +9,20 @@ namespace LicenseParser
     public class LicenseParser
     {
         public static int newIndex = 0;
+
+        // The heavy lifter of the parser -- parses our processed input text into LicenseChunks, which contain
+        // the full details of each parsed license
         public ArrayList CleanedLic(ArrayList parsedFile)
         {
+            // if the file's too short to even have the mandatory Flexnet reserved lines, skip parsing
+            // FOR FUTURE REFERENCE: SHOULD DEFINE # OF RESERVED WORDS AS STATIC CONSTANT
             if (parsedFile.Count > 3)
             {
-                ArrayList returnedArray = new ArrayList();
-                bool alreadyUsed = false;
-                ArrayList lics = new ArrayList();
-                ArrayList commentIndexes = new ArrayList();
-                lics = Form1.Pars.Licenses();
+                ArrayList lics = Form1.Pars.Licenses(); // list of valid licenses as found in our lookup XML
+                ArrayList chunks = new ArrayList(); // our list of fully parsed and documented licenses; will be our returned variable
 
-                ArrayList licenseContent = new ArrayList();
-
-                ArrayList chunks = new ArrayList();
+                // Check if junk text accidentally got typed at the start of the file; see if we can remove it and still
+                // proceed with parsing or if the file is just invalid, in which case we hit our catch statement
                 try
                 {
                     while (!FlexNetWords.StartsOK(parsedFile[0].ToString(), parsedFile[1].ToString(), parsedFile[2].ToString()))
@@ -37,28 +38,29 @@ namespace LicenseParser
                     Form1.displayFailure("This license file does not begin with the mandatory SERVER, USE_SERVER, and VENDOR lines, and is therefore invalid.");
                     return new ArrayList();
                 }
+
+                // loop through the lines in our processed input file
                 for (int i = 0; i < parsedFile.Count; i++)
                 {
-                    String line = parsedFile[i].ToString();
-                    String checkedLine = line.Trim();
-                    //if (checkedLine.Length > LicenseLinesLength && !line.Contains("\\") && !line.Contains("\"") && !checkedLine.StartsWith("#") && !checkedLine.StartsWith("//"))
-                    //{
-                    //    badLineLocations.Add(manipulatedFile.IndexOf(line) + 1);                           // if the line is longer than the default line length, is not a comment, and does not
-                    //}                                                                                      // contain any \s or "s, remember its location for later
-                    if (FlexNetWords.StartsWithComment(checkedLine))
+                    String line = parsedFile[i].ToString(); // single line from our processed file
+                    String trimmedLine = line.Trim(); // use this to check if a line starts with important words/chars without modifying it
+                    if (FlexNetWords.StartsWithComment(trimmedLine))
                     {
-                        if (Form2.KeepComments)                                               //protects comments if comments if checkbox is clicked
+                        // save comments if set in prefs
+                        if (Form2.KeepComments)
                         {
                             chunks.Add(line);
                         }
                     }
-                    else if (FlexNetWords.StartsWithReserved(checkedLine))                      // ensures only one copy of certain keywords exists. Important area for future code softening.
+                    // ensures only one copy of certain keywords exists. Important area for future code softening.
+                    else if (FlexNetWords.StartsWithReserved(trimmedLine))
                     {
                         chunks.Add(line);
                     }
 
                     else
                     {
+                        // save line breaks if requested
                         if (Form2.KeepBreaks)
                         {
                             if (String.IsNullOrWhiteSpace(line))
@@ -66,7 +68,8 @@ namespace LicenseParser
                                 chunks.Add(line);
                             }
                         }
-                        if (checkedLine.StartsWith("PACKAGE") || checkedLine.StartsWith("INCREMENT"))
+                        // if we hit one our of license keywords, parse the block for info
+                        if (trimmedLine.StartsWith("PACKAGE") || trimmedLine.StartsWith("INCREMENT"))
                         {
                             String text = "";
                             String licName = "";
@@ -76,76 +79,79 @@ namespace LicenseParser
                             String timeType = "";
                             String expirationDate = "";
                             String numSeats = "";
-                            ArrayList comps = new ArrayList();
-                            if (checkedLine.StartsWith("PACKAGE"))
+                            ArrayList comps = new ArrayList(); // license components
+
+                            // figure out license type
+                            if (trimmedLine.StartsWith("PACKAGE"))
                             {
                                 licType = "PACKAGE";
                             }
-                            else if (checkedLine.StartsWith("INCREMENT") && !checkedLine.StartsWith("INCREMENT PLIST"))
-                            {
-                                licType = "INCREMENT";
-                            }
-                            else if (checkedLine.StartsWith("INCREMENT PLIST"))
+                            else if (trimmedLine.StartsWith("INCREMENT PLIST"))
                             {
                                 licType = "INCREMENT PLIST";
                             }
+                            else if (trimmedLine.StartsWith("INCREMENT"))
+                            {
+                                licType = "INCREMENT";
+                            }
 
-                            alreadyUsed = false;
+                            // !!!! CONSTRUCTION ZONE !!!!
+
+                            // grab the block of text for the license
                             text += Utilities.CheckEnd(line, i, parsedFile);
 
+                            // The above line calls a method which currently determines what constitutes a license by running
+                            // until an empty line is hit. However, this method should be changed to A: count the quotes,
+                            // and perform other validation checks, as well as B: read until a Package+Increment or lone Increment
+                            // is read, since some suites have a bunch of Package/Increment comments listed in sequence with no
+                            // empty lines in between to hit.
+
+                            // !!!! END CONSTRUCTION ZONE !!!!
+
+                            // Cross-reference license and its components with our known licenses; remove from list as they are matched
+                            ArrayList licsToRemove = new ArrayList(); // store licenses we find so as to not mess up our for loop with removal
                             foreach (License license in lics)
                             {
+                                // we found a match!
                                 if (line.Contains(license.FeatureCode))
                                 {
-                                    if (line.Contains("COMPONENT"))
-                                    {
-                                        if (line.IndexOf(license.FeatureCode) < line.IndexOf("COMPONENT"))
-                                        {
-                                            licName = license.LicenseName;
-                                            featCode = license.FeatureCode;
-                                            foreach (License l in Form1.licensesFound)
-                                            {
-                                                if (license.LicenseName.Equals(l.LicenseName))
-                                                {
-                                                    alreadyUsed = true;
-                                                }
-                                            }
-                                            if (alreadyUsed == false)
-                                            {
-                                                Form1.licensesFound.Add(license);
-                                            }
-
-                                        }
-                                    }
-                                    else
+                                    // the only time we wouldn't jump on a feature code match is if it's listed as a component, not
+                                    // the license code itself
+                                    if (!(line.Contains("COMPONENT") && line.IndexOf(license.FeatureCode) >= line.IndexOf("COMPONENT")))
                                     {
                                         licName = license.LicenseName;
                                         featCode = license.FeatureCode;
-                                        foreach (License l in Form1.licensesFound)
-                                        {
-                                            if (license.LicenseName.Equals(l.LicenseName))
-                                            {
-                                                alreadyUsed = true;
-                                            }
-                                        }
-                                        if (alreadyUsed == false)
-                                        {
-                                            Form1.licensesFound.Add(license);
-                                        }
+                                        licsToRemove.Add(license);
                                     }
+                                    else
+                                    {
+                                        comps.Add(license.LicenseName);
+                                        licsToRemove.Add(license);
+                                    }
+
                                 }
+                                // Components can spill to the next line, check it too if we're on the main line
                                 if (parsedFile[i + 1].ToString().Contains(license.FeatureCode))
                                 {
+                                    // make sure our current line contains component, else we might already be on the 2nd line of the components
                                     if (parsedFile[i + 1].ToString().Contains("\"") && line.Contains("COMPONENT"))
                                     {
                                         comps.Add(license.LicenseName);
+                                        licsToRemove.Add(license);
                                     }
                                 }
                             }
+                            // clean up unused license list
+                            foreach (License usedLic in licsToRemove)
+                            {
+                                lics.Remove(usedLic);
+                            }
+                            // should've found a match by now
                             if (licName.Equals(""))
                             {
                                 licName = "Unknown License";
                             }
+                            // handle plist
                             if (text.Contains("INCREMENT PLIST"))
                             {
                                 if (!Form1.Plist)
@@ -157,27 +163,21 @@ namespace LicenseParser
                                     text = text.Remove(text.IndexOf("INCREMENT PLIST"));
                                 }
                             }
-                            if (checkedLine.StartsWith("PACKAGE"))
-                            {
-                                commentIndexes.Add(i);
-                            }
-                            else if (checkedLine.Trim().StartsWith("INCREMENT"))
-                            {
-                                commentIndexes.Add(i);
-                            }
+                            // Grab some info from main declaration line
                             if (licType.Equals("PACKAGE"))
                             {
                                 featureType = "Subscription Package";
                             }
                             if (text.Contains("permanent"))
                             {
-                                timeType = "Permanent";
+                                timeType = "Perpetual";
                             }
                             else if (text.Contains("temporary") || text.Contains("non-extendable"))
                             {
-                                timeType = "Temporary";
+                                timeType = "Term";
                             }
-                            if (!timeType.Equals("Permanent"))
+                            // find expiration date if the license isn't perpetual
+                            if (!timeType.Equals("Perpetual"))
                             {
                                 int dateSpot = text.IndexOf("INCREMENT");
                                 if (text.Contains("1.000") && text.IndexOf("1.000", dateSpot) > dateSpot)
@@ -189,13 +189,14 @@ namespace LicenseParser
                                     }
                                 }
                             }
+
+                            // jump over the expiration date to grab to the number of seats
                             if (!expirationDate.Equals("") && text.Contains(expirationDate))
                             {
                                 if (text[text.IndexOf(expirationDate) + expirationDate.Length + 1] >= '0' && text[text.IndexOf(expirationDate) + expirationDate.Length + 1] <= '9')
                                 {
                                     numSeats += text[text.IndexOf(expirationDate) + expirationDate.Length + 1];
                                 }
-
                             }
                             else if (text.Contains("permanent"))
                             {
@@ -206,6 +207,7 @@ namespace LicenseParser
                                     index++;
                                 }
                             }
+                            // parse components section
                             if (text.Contains("COMPONENT"))
                             {
                                 String mysteryCode = "";
@@ -293,6 +295,6 @@ namespace LicenseParser
                 Form1.displayFailure("Error: The file is either blank or too short and cannot be cleaned.");
                 return new ArrayList();
             }
-                }
         }
     }
+}
