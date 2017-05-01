@@ -2,6 +2,7 @@ C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Pars
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseParser.Form1.resources
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseParser.Form2.resources
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\Flexnet License Parser.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\bin\Release\Flexnet-License-Parser.exe.manifest
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\bin\Release\Flexnet-License-Parser.application
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\bin\Release\Flexnet-License-Parser.exe
@@ -12,3 +13,28 @@ C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Pars
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\Flexnet-License-Parser.application
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\Flexnet-License-Parser.exe
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\Flexnet-License-Parser.pdb
+=======
+C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseCleaner.exe
+C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseCleaner.pdb
+C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\bin\Release\LicenseCleaner.exe.manifest
+C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\bin\Release\LicenseCleaner.application
+C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\bin\Release\LicenseCleaner.exe
+C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\bin\Release\LicenseCleaner.pdb
+C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseCleaner.TrustInfo.xml
+C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseCleaner.exe.manifest
+C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseCleaner.application
+C:\Users\Khalil\OneDrive\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\bin\Release\LicenseCleaner.exe.manifest
+C:\Users\Khalil\OneDrive\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\bin\Release\LicenseCleaner.application
+C:\Users\Khalil\OneDrive\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\bin\Release\LicenseCleaner.exe
+C:\Users\Khalil\OneDrive\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\bin\Release\LicenseCleaner.pdb
+C:\Users\Khalil\OneDrive\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\Flexnet License Parser.csprojResolveAssemblyReference.cache
+C:\Users\Khalil\OneDrive\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseParser.Form1.resources
+C:\Users\Khalil\OneDrive\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseParser.Form2.resources
+C:\Users\Khalil\OneDrive\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseCleaner.Properties.Resources.resources
+C:\Users\Khalil\OneDrive\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\Flexnet License Parser.csproj.GenerateResource.Cache
+C:\Users\Khalil\OneDrive\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseCleaner.TrustInfo.xml
+C:\Users\Khalil\OneDrive\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseCleaner.exe.manifest
+C:\Users\Khalil\OneDrive\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseCleaner.application
+C:\Users\Khalil\OneDrive\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseCleaner.exe
+C:\Users\Khalil\OneDrive\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseCleaner.pdb
+>>>>>>> origin/master

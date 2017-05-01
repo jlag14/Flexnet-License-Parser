@@ -30,6 +30,8 @@ namespace LicenseParser
         public Form1()
         {
             InitializeComponent();
+            MinimizeBox = true;
+            MaximizeBox = true;
             Form2.StartUp();
         }
 
@@ -290,6 +292,21 @@ namespace LicenseParser
             }
             rkHKCU.Close();
             preferencesForm.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uncleanFile_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cleanedFile_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

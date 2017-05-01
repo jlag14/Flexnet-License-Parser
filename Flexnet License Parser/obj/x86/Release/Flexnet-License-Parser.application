@@ -15,7 +15,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+<<<<<<< HEAD:Flexnet License Parser/obj/x86/Release/Flexnet-License-Parser.application
         <dsig:DigestValue>7xm45zskgGBxnSOBeidU5onZRPc=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>aPYdzm6iA33fCsMFFCHWazb0j+s=</dsig:DigestValue>
+>>>>>>> origin/master:Flexnet License Parser/obj/x86/Release/LicenseCleaner.application
       </hash>
     </dependentAssembly>
   </dependency>
