@@ -82,7 +82,31 @@ namespace LicenseParser
             FlexNetWords.ResetReservedWords();
             cleanFile = "";
             cleanedFile.Text = "";
-            keepthese = cleaner.CleanedLic(manipulatedFile);
+            try
+            {
+                keepthese = cleaner.CleanedLic(manipulatedFile);
+            }
+            catch (LicensesNotFoundException lnfe)
+            {
+                var result = MessageBox.Show(lnfe.Message + " Would you like to set the file path for the XML lookup file now?" +
+                    " The path can be set at any time via Edit > Preferences, but you will not be able to clean any files" +
+                    " without having a valid XML file path set. If you would like more details, please see the help link " +
+                    "under Help > Help Documentation.", 
+                    "File Could Not Be Cleaned", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    OpenFileDialog openDialog = new OpenFileDialog();
+                    openDialog.Filter = "XML Files | *.xml";
+                    openDialog.ShowDialog();
+                    if (!string.IsNullOrEmpty(openDialog.FileName))
+                    {
+                        Form2.SetXML(openDialog.FileName);
+                        displayStatus("XML selected.");
+                    }
+                }
+                return;
+            }
             if (keepthese.Count >= 1)
             {
                 foreach (object obj in printMe)
@@ -104,7 +128,7 @@ namespace LicenseParser
                     cleanFile = "";
                     start++;
                 }
-                    displayStatus("File cleaned.");
+                displayStatus("File cleaned.");
             }
         }
 

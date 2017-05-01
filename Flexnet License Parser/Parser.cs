@@ -81,15 +81,36 @@ namespace LicenseParser
         {
             ArrayList result = new ArrayList();
             XmlDocument doc = new XmlDocument();
-                        //todo
-            doc.Load("C:\\Program Files\\MDi\\License Cleaner\\1.0\\dat\\LicenseMeta.xml");
-            foreach (XmlNode node in doc.DocumentElement.ChildNodes)
+
+            // make sure XML loads before trying to parse it
+            try
             {
-                foreach (XmlNode childnode in node)
+                doc.Load(Form2.LicenseMetaXMLPath);
+                foreach (XmlNode node in doc.DocumentElement.ChildNodes)
                 {
-                    string text = childnode.InnerText;
-                    result.Add(text);
+                    foreach (XmlNode childnode in node)
+                    {
+                        string text = childnode.InnerText;
+                        result.Add(text);
+                    }
                 }
+            }
+            catch (System.IO.FileNotFoundException e)
+            {
+                // Do nothing, just pass the empty result to LicenseParser, where we'll throw a special exception if we have
+                // an empty license list
+            }
+            // Apparently this exception is getting thrown as opposed to FileNotFound when the XML is missing
+            catch (System.ArgumentException e)
+            {
+                // Do nothing, just pass the empty result to LicenseParser, where we'll throw a special exception if we have
+                // an empty license list
+            }
+            // If there was any other problem opening the XML, still continue with our standard recovery technique, but
+            // also print the error and exception type to the console so we can add a catch for it
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message + " | my type is " + e.GetType().ToString());
             }
             return result;
         }
@@ -98,10 +119,13 @@ namespace LicenseParser
         {
             ArrayList licenses = new ArrayList();
             ArrayList z = ParseXML();
-            for (int i = 0; i < z .Count; i += 2)
+            if (z.Count > 0)
             {
-                License lic = new License(z[i].ToString(), z[i + 1].ToString());
-                licenses.Add(lic);
+                for (int i = 0; i < z.Count; i += 2)
+                {
+                    License lic = new License(z[i].ToString(), z[i + 1].ToString());
+                    licenses.Add(lic);
+                }
             }
             return licenses;
         }

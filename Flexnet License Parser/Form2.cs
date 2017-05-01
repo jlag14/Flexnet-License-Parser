@@ -24,7 +24,7 @@ namespace LicenseParser
         public static int LeadingCommentSpace = 1;
         public static int IndentSpaces = 4;
 
-        public static string LicenseMetaXMLPath = ""; // will come back to this with default path
+        public static string LicenseMetaXMLPath = "";
 
         public static bool IndentedComments = false;
         public static bool KeepComments = false;
@@ -56,6 +56,8 @@ namespace LicenseParser
             LeadingCommentSpace = 1;
             IndentSpaces = 4;
 
+            LicenseMetaXMLPath = "";
+
             IndentedComments = false;
             KeepComments = false;
             KeepBreaks = false;
@@ -84,6 +86,7 @@ namespace LicenseParser
             rkRun.SetValue("IndentedComments", Form2.IndentedComments);
             rkRun.SetValue("SpacesInIndent", Form2.IndentSpaces);
             rkRun.SetValue("SpacesInIndentEnabled", Form2.IndentedComments);
+            rkRun.SetValue("LicenseMetaXMLPath", LicenseMetaXMLPath);
 
             featureTypes.Checked = false;
             licenseTypes.Checked = false;
@@ -103,6 +106,8 @@ namespace LicenseParser
             variableLength.Checked = true;
             fixedNumber.Visible = false;
             fixedNumber.Value = 10;
+
+            XMLPathBox.Text = "";
 
             rkHKCU.Close();
             rkRun.Close();
@@ -131,6 +136,8 @@ namespace LicenseParser
                 LeadingCommentSpace = Convert.ToInt32(rkRun.GetValue("SpaceAfterCommentChar").ToString());
                 IndentedComments = Convert.ToBoolean(rkRun.GetValue("IndentedComments").ToString());
                 IndentSpaces = Convert.ToInt32(rkRun.GetValue("SpacesInIndent").ToString());
+
+                LicenseMetaXMLPath = rkRun.GetValue("LicenseMetaXMLPath").ToString();
             }
             catch (NullReferenceException e)
             {
@@ -152,6 +159,8 @@ namespace LicenseParser
                 FixedHeaderLength = false;
                 VariableHeaderLength = true;
                 FixedCommentLength = 10;
+
+                LicenseMetaXMLPath = "";
             }
         }
 
@@ -192,6 +201,9 @@ namespace LicenseParser
                 headerOptions.Enabled = addComments.Checked;
                 indentedComments.Enabled = addComments.Checked;
                 headerLengthBox.Enabled = headers.Checked;
+
+                XMLPathBox.Text = rkRun.GetValue("LicenseMetaXMLPath").ToString();
+
                 rkRun.Close();
 
                 ShowFeatureTypes = featureTypes.Checked;
@@ -210,6 +222,8 @@ namespace LicenseParser
                 IndentSpaces = (int)numberOfSpacesPerIndent.Value;
                 IndentedComments = indentedComments.Checked;
                 LeadingCommentSpace = (int)leadingCommentSpace.Value;
+
+                LicenseMetaXMLPath = XMLPathBox.Text;
 
                 key.Close();
                 rkHKCU.Close();
@@ -244,10 +258,20 @@ namespace LicenseParser
             rkRun.SetValue("SpacesInIndent", numberOfSpacesPerIndent.Value);
             rkRun.SetValue("SpacesInIndentEnabled", numberOfSpacesPerIndent.Enabled);
 
-            
+            rkRun.SetValue("LicenseMetaXMLPath", XMLPathBox.Text);
+
             rkHKCU.Close();
             rkRun.Close();
             Form1.displayFailure("Preferences saved.");
+        }
+
+        // Needed to save XML rename from clean click failure without re-saving everything
+        public static void SetXML(String newPath)
+        {
+            LicenseMetaXMLPath = newPath;
+            RegistryKey rkHKCU = Registry.CurrentUser;
+            RegistryKey rkRun = originalRecurse(rkHKCU);
+            rkRun.SetValue("LicenseMetaXMLPath", LicenseMetaXMLPath);
         }
 
         private void comments2_Click(object sender, EventArgs e)
@@ -304,8 +328,7 @@ namespace LicenseParser
 
         private void fixedNumber_ValueChanged(object sender, EventArgs e)
         {
-                Form2.FixedCommentLength = (int)fixedNumber.Value;
-                
+                Form2.FixedCommentLength = (int)fixedNumber.Value;                
         }
         private void fixedLength_Click(object sender, EventArgs e)
         {
@@ -457,6 +480,11 @@ namespace LicenseParser
             
         }
 
+        private void XMLPathBox_TextChanged(object sender, EventArgs e)
+        {
+            LicenseMetaXMLPath = XMLPathBox.Text;
+        }
+
         private void reset_Click(object sender, EventArgs e)
         {
               Form2.ShowFeatureTypes = false;
@@ -495,9 +523,7 @@ namespace LicenseParser
               fixedLength.Checked = false;
               variableLength.Checked = true;
               fixedNumber.Visible = false;
-              fixedNumber.Value = 10;
-
-              
+              fixedNumber.Value = 10;              
         }
 
         private void savePrefs_Click(object sender, EventArgs e)
@@ -536,40 +562,6 @@ namespace LicenseParser
                 }
             }
             return temp;
-
-            //foreach (String name in temp.GetSubKeyNames())
-            //        {
-            //            if (name.Equals("MDi"))
-            //            {
-            //                temp = temp.OpenSubKey(name);
-            //                foreach (String st in temp.GetSubKeyNames())
-            //                {
-            //                    if (st.Equals("License Cleaner"))
-            //                    {
-            //                        temp = temp.OpenSubKey(st);
-            //                        foreach (String nam in temp.GetSubKeyNames())
-            //                        {
-            //                            if (nam.Equals("1.0"))
-            //                            {
-            //                                temp = temp.OpenSubKey(nam);
-            //                                foreach (String strin in temp.GetSubKeyNames())
-            //                                {
-            //                                    if (strin.Equals("Prefs"))
-            //                                    {
-            //                                        temp = temp.OpenSubKey(strin);
-            //                                        break;
-            //                                    }
-            //                                }
-            //                                break;
-            //                            }
-            //                        }
-            //                        break;
-            //                    }
-            //                }
-            //                break;
-            //            }
-            //        }
-            //        break;
         }
 
         private static RegistryKey originalRecurse(RegistryKey reg)

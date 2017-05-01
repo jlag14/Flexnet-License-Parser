@@ -21,6 +21,16 @@ namespace LicenseParser
                 ArrayList lics = Form1.Pars.Licenses(); // list of valid licenses as found in our lookup XML
                 ArrayList chunks = new ArrayList(); // our list of fully parsed and documented licenses; will be our returned variable
 
+                // check if XML read worked
+                if (lics.Count == 0)
+                {
+                    if (Form2.LicenseMetaXMLPath.Equals(""))
+                    {
+                        throw new LicensesNotFoundException("Error: No path to the XML license lookup file has been specified.");
+                    }
+                    throw new LicensesNotFoundException("Error: could not find valid XML file at location " + Form2.LicenseMetaXMLPath + " .");
+                }
+
                 // Check if junk text accidentally got typed at the start of the file; see if we can remove it and still
                 // proceed with parsing or if the file is just invalid, in which case we hit our catch statement
                 try
