@@ -7,6 +7,8 @@ using System.Xml;
 
 namespace LicenseParser
 {
+    // This class processes the user's input text for the LicenseParser file and handles the parsing of the XML license lookup file.
+    // Note: only handles preprocessing of input text -- does not actually do any documentation/validation/cleaning.
     public class Parser
     {
         public ArrayList Parse(String licenseSrc)                                      

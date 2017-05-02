@@ -42,23 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-<<<<<<< HEAD:Flexnet License Parser/obj/x86/Release/Flexnet-License-Parser.exe.manifest
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Flexnet-License-Parser.exe" size="50688">
       <assemblyIdentity name="Flexnet-License-Parser" version="0.1.1.1" language="neutral" processorArchitecture="x86" />
-=======
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LicenseCleaner.exe" size="49152">
-      <assemblyIdentity name="LicenseCleaner" version="0.1.1.1" language="neutral" processorArchitecture="x86" />
->>>>>>> origin/master:Flexnet License Parser/bin/Release/LicenseCleaner.exe.manifest
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-<<<<<<< HEAD:Flexnet License Parser/obj/x86/Release/Flexnet-License-Parser.exe.manifest
-        <dsig:DigestValue>hEypVxeXBetLFE4Bb4W3MwuZv6U=</dsig:DigestValue>
-=======
-        <dsig:DigestValue>XUE2xTxIxZkS+Ubb1Cv6M9T7Mvg=</dsig:DigestValue>
->>>>>>> origin/master:Flexnet License Parser/bin/Release/LicenseCleaner.exe.manifest
+        <dsig:DigestValue>XuNIDidTJKsqCQHpjiMacW5/xuo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

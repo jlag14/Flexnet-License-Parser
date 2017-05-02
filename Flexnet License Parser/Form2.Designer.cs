@@ -393,7 +393,7 @@
             // 
             // reset
             // 
-            this.reset.Location = new System.Drawing.Point(611, 311);
+            this.reset.Location = new System.Drawing.Point(606, 279);
             this.reset.Margin = new System.Windows.Forms.Padding(4);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(132, 28);
@@ -406,7 +406,7 @@
             // 
             // savePrefs
             // 
-            this.savePrefs.Location = new System.Drawing.Point(621, 214);
+            this.savePrefs.Location = new System.Drawing.Point(621, 188);
             this.savePrefs.Margin = new System.Windows.Forms.Padding(4);
             this.savePrefs.Name = "savePrefs";
             this.savePrefs.Size = new System.Drawing.Size(100, 28);
@@ -419,7 +419,7 @@
             // cancel
             // 
             this.cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancel.Location = new System.Drawing.Point(621, 261);
+            this.cancel.Location = new System.Drawing.Point(621, 233);
             this.cancel.Margin = new System.Windows.Forms.Padding(4);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(100, 28);
