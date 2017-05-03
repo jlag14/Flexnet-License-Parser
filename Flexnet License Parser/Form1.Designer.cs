@@ -75,7 +75,6 @@
             this.uncleanFile.Size = new System.Drawing.Size(720, 200);
             this.uncleanFile.TabIndex = 0;
             this.uncleanFile.WordWrap = false;
-            this.uncleanFile.TextChanged += new System.EventHandler(this.uncleanFile_TextChanged);
             // 
             // open
             // 
@@ -105,7 +104,6 @@
             this.cleanedFile.Size = new System.Drawing.Size(720, 200);
             this.cleanedFile.TabIndex = 2;
             this.cleanedFile.WordWrap = false;
-            this.cleanedFile.TextChanged += new System.EventHandler(this.cleanedFile_TextChanged);
             // 
             // clearBottom
             // 
@@ -345,7 +343,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "License Cleaner";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.status.ResumeLayout(false);

@@ -19,7 +19,6 @@ namespace LicenseParser
             int readLen = 0; // read length
             Boolean eof = false;
             String line;
-            //      String[] result;
             ArrayList licLines = new ArrayList();
             // get lenth of licenseSrc
             licLen = licenseSrc.Length;

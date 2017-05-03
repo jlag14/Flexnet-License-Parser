@@ -532,19 +532,6 @@ namespace LicenseParser
             this.Close();
         }
 
-        //private void Form2_FormClosing(object sender, CancelEventArgs ar)
-        //{
-        //    if (justSaved == false)
-        //    {
-        //        var mBox = MessageBox.Show("Changes have not yet been saved. Exit without saving?", "Exit Without Saving", MessageBoxButtons.YesNo);
-        //        if (mBox == DialogResult.No)
-        //        {
-        //            ar.Cancel = true;
-        //        }
-        //    }
-
-        //}
-        //SOFTWARE\\MDi\\License Cleaner\\1.0\\Prefs
         private RegistryKey recurse(RegistryKey reg)
         {
             RegistryKey rk = reg;
@@ -555,7 +542,7 @@ namespace LicenseParser
                 {
                     temp = reg.OpenSubKey(s, true);
                     temp = temp.CreateSubKey("MDi");
-                    temp = temp.CreateSubKey("License Cleaner");
+                    temp = temp.CreateSubKey("Flexnet License Parser");
                     temp = temp.CreateSubKey("1.0");
                     temp = temp.CreateSubKey("Prefs");
                     break;
@@ -574,7 +561,7 @@ namespace LicenseParser
                 {
                     temp = reg.OpenSubKey(s, true);
                     temp = temp.CreateSubKey("MDi");
-                    temp = temp.CreateSubKey("License Cleaner");
+                    temp = temp.CreateSubKey("Flexnet License Parser");
                     temp = temp.CreateSubKey("1.0");
                     temp = temp.CreateSubKey("Prefs");
                     break;

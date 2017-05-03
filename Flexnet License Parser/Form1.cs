@@ -20,7 +20,6 @@ namespace LicenseParser
         private string cleanFile = "";
         private ArrayList manipulatedFile = new ArrayList();
         public static bool Plist = false;
-        public static ArrayList printMe = new ArrayList();
         private ArrayList keepthese = new ArrayList();
         private ArrayList parsedXML = new ArrayList();
         private ArrayList reservedWords = new ArrayList() { "SERVER", "USE_SERVER", "VENDOR" };
@@ -111,10 +110,6 @@ namespace LicenseParser
             }
             if (keepthese.Count >= 1)
             {
-                foreach (object obj in printMe)
-                {
-                    cleanedFile.Text += Environment.NewLine + obj.ToString();
-                }
                 int start = 0;
                 int pos = 0;
                 while (start * 1000 <= keepthese.Count)                                     //checks to make sure the loop will not be starting past the end of the file,
@@ -155,7 +150,7 @@ namespace LicenseParser
             saveDialog.DefaultExt = "lic";
             saveDialog.AddExtension = true;
             saveDialog.FileName = "Cleaned_" + licenseFileName;
-            saveDialog.InitialDirectory = @"C:\Users\Joe Lagnese\Documents\";
+            saveDialog.InitialDirectory = Environment.SpecialFolder.UserProfile + @"\Documents\";
             saveDialog.OverwritePrompt = true;
             saveDialog.Title = "License Cleaner";
             saveDialog.ValidateNames = true;
@@ -257,13 +252,6 @@ namespace LicenseParser
 
         private void Form1_FormClosing(object sender, CancelEventArgs ar)
         {
-            //MessageBoxResult key = MessageBox.Show(
-            //    "Are you sure you want to quit?",
-            //    "Confirm",
-            //    MessageBoxButton.YesNo,
-            //    MessageBoxImage.Question,
-            //    MessageBoxResult.No);
-            //e.Cancel = (key == MessageBoxResult.No);
             var mBox = MessageBox.Show("Are you sure you want to quit?", "Confirm", MessageBoxButtons.YesNo);
             if (mBox == DialogResult.No)
             {
@@ -292,21 +280,6 @@ namespace LicenseParser
             }
             rkHKCU.Close();
             preferencesForm.ShowDialog();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uncleanFile_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cleanedFile_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
