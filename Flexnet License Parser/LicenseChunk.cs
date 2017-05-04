@@ -172,14 +172,14 @@ namespace LicenseParser
                         result += Environment.NewLine + headerPiece;
                     }
                 }
-                result += Environment.NewLine + holder;
+                result += Environment.NewLine + holder + Environment.NewLine;
                 
                 // check if components should be listed; indent them in a list
                 if (Form2.listSubComponents)
                 {
                     foreach (object obj in components)
                     {
-                        result += Environment.NewLine + commentChar + space + "    - " + obj.ToString();
+                        result += commentChar + space + "    - " + obj.ToString();
                     }
                 }
 
@@ -188,11 +188,11 @@ namespace LicenseParser
                 {
                     if (Form2.VariableHeaderLength)
                     {
-                        result += Environment.NewLine + headerPiece + Environment.NewLine + Environment.NewLine;
+                        result += headerPiece + Environment.NewLine + Environment.NewLine;
                     }
                     else if (Form2.FixedHeaderLength)
                     {
-                        result += Environment.NewLine + headerPiece + Environment.NewLine + Environment.NewLine;
+                        result += headerPiece + Environment.NewLine + Environment.NewLine;
                     }
                 }
 
