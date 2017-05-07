@@ -118,8 +118,7 @@ namespace LicenseParser
 
                             // !!!! END CONSTRUCTION ZONE !!!!
 
-                            // Cross-reference license and its components with our known licenses; remove from list as they are matched
-                            ArrayList licsToRemove = new ArrayList(); // store licenses we find so as to not mess up our for loop with removal
+                            // Find match for main featureCode first
                             foreach (License license in lics)
                             {
                                 // we found a match!
@@ -131,30 +130,10 @@ namespace LicenseParser
                                     {
                                         licName = license.LicenseName;
                                         featCode = license.FeatureCode;
-                                        licsToRemove.Add(license);
-                                    }
-                                    else
-                                    {
-                                        comps.Add(license.LicenseName);
-                                        licsToRemove.Add(license);
-                                    }
-
-                                }
-                                // Components can spill to the next line, check it too if we're on the main line
-                                if (parsedFile[i + 1].ToString().Contains(license.FeatureCode))
-                                {
-                                    // make sure our current line contains component, else we might already be on the 2nd line of the components
-                                    if (parsedFile[i + 1].ToString().Contains("\"") && line.Contains("COMPONENT"))
-                                    {
-                                        comps.Add(license.LicenseName);
-                                        licsToRemove.Add(license);
+                                        lics.Remove(license);
+                                        break;
                                     }
                                 }
-                            }
-                            // clean up unused license list
-                            foreach (License usedLic in licsToRemove)
-                            {
-                                lics.Remove(usedLic);
                             }
                             // should've found a match by now
                             if (licName.Equals(""))
@@ -220,23 +199,33 @@ namespace LicenseParser
                             // parse components section
                             if (text.Contains("COMPONENT"))
                             {
-                                String mysteryCode = "";
-                                bool added = false;
-                                int startIndex = text.IndexOf("COMPONENT");
+                                String mysteryCode = ""; // will hold a given component feature code
+                                bool added = false; // tracks whether or not we ID a given component
+                                int startIndex = text.IndexOf("COMPONENT"); // start from COMPONENT
+
+                                // go from the first quote to the second one (quotes indicate the block)
                                 startIndex = text.IndexOf("\"", startIndex) + 1;
                                 while (!text[startIndex].ToString().Equals("\""))
                                 {
                                     added = false;
                                     mysteryCode = "";
+                                    // eat characters until we hit a space to get the feature code
                                     while (!text[startIndex].ToString().Equals(" ") && !text[startIndex].ToString().Equals("\""))
                                     {
-                                        mysteryCode += text[startIndex];
+                                        // handle the EOL character and the tab when COMPONENT list wraps around
+                                        if (!text[startIndex].ToString().Trim().Equals("") && !text[startIndex].ToString().Equals("\\"))
+                                        {
+                                            mysteryCode += text[startIndex];
+                                        }
                                         startIndex++;
                                     }
+                                    // make sure we didnt just run off the end of the license
                                     if (text[startIndex].ToString().Equals(" "))
                                     {
-                                        if (!text[startIndex + 1].ToString().Equals(" ") && !text[startIndex - 1].ToString().Equals(" "))
+                                        // make sure there weren't just two spaces in between components
+                                        if (mysteryCode.Trim().Length > 0)
                                         {
+                                            // search our lookup file for matching name for the feature code we have
                                             foreach (License lic in lics)
                                             {
                                                 if (mysteryCode.Equals(lic.FeatureCode))
@@ -244,12 +233,14 @@ namespace LicenseParser
                                                     if (!comps.Contains(lic.LicenseName))
                                                     {
                                                         comps.Add(lic.LicenseName);
-                                                        mysteryCode = lic.LicenseName;
                                                     }
+                                                    // we mark the license as added as long as there's a match; if it wasn't added after
+                                                    // the match, it's a dupe and we don't need the extra print
                                                     added = true;
                                                     break;
                                                 }
                                             }
+                                            // we didn't get a match
                                             if (!added)
                                             {
                                                 comps.Add("Unknown License");
@@ -257,6 +248,7 @@ namespace LicenseParser
                                         }
                                         startIndex++;
                                     }
+                                    // catch for when we hit the last component in the block
                                     else if (text[startIndex].ToString().Equals("\""))
                                     {
                                         foreach (License lic in lics)
@@ -266,7 +258,6 @@ namespace LicenseParser
                                                 if (!comps.Contains(lic.LicenseName))
                                                 {
                                                     comps.Add(lic.LicenseName);
-                                                    mysteryCode = lic.LicenseName;
                                                 }
                                                 added = true;
                                                 break;
@@ -277,6 +268,7 @@ namespace LicenseParser
                                             comps.Add("Unknown License");
                                         }
                                     }
+                                    Console.WriteLine("XX" + mysteryCode + "XX");
                                 }
                             }
                             ArrayList removes = comps;

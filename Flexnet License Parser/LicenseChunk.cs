@@ -179,7 +179,7 @@ namespace LicenseParser
                 {
                     foreach (object obj in components)
                     {
-                        result += commentChar + space + "    - " + obj.ToString();
+                        result += commentChar + space + "    - " + obj.ToString() + Environment.NewLine;
                     }
                 }
 
