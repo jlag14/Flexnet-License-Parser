@@ -67,21 +67,23 @@
             this.uncleanFile.AcceptsTab = true;
             this.uncleanFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uncleanFile.Location = new System.Drawing.Point(32, 57);
+            this.uncleanFile.Location = new System.Drawing.Point(40, 71);
+            this.uncleanFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uncleanFile.MaxLength = 1000000;
             this.uncleanFile.Multiline = true;
             this.uncleanFile.Name = "uncleanFile";
             this.uncleanFile.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.uncleanFile.Size = new System.Drawing.Size(720, 200);
+            this.uncleanFile.Size = new System.Drawing.Size(899, 249);
             this.uncleanFile.TabIndex = 0;
             this.uncleanFile.WordWrap = false;
             // 
             // open
             // 
             this.open.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.open.Location = new System.Drawing.Point(275, 263);
+            this.open.Location = new System.Drawing.Point(344, 329);
+            this.open.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.open.Name = "open";
-            this.open.Size = new System.Drawing.Size(75, 23);
+            this.open.Size = new System.Drawing.Size(94, 29);
             this.open.TabIndex = 1;
             this.open.Text = "Open...";
             this.toolTip1.SetToolTip(this.open, "When clicked, opens a window to allow the user to\r\nselect a .lic or a .txt file t" +
@@ -96,18 +98,20 @@
             this.cleanedFile.AcceptsTab = true;
             this.cleanedFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cleanedFile.Location = new System.Drawing.Point(32, 315);
+            this.cleanedFile.Location = new System.Drawing.Point(40, 394);
+            this.cleanedFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cleanedFile.MaxLength = 1000000;
             this.cleanedFile.Multiline = true;
             this.cleanedFile.Name = "cleanedFile";
             this.cleanedFile.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.cleanedFile.Size = new System.Drawing.Size(720, 200);
+            this.cleanedFile.Size = new System.Drawing.Size(899, 249);
             this.cleanedFile.TabIndex = 2;
             this.cleanedFile.WordWrap = false;
             // 
             // clearBottom
             // 
-            this.clearBottom.Location = new System.Drawing.Point(480, 442);
+            this.clearBottom.Location = new System.Drawing.Point(600, 552);
+            this.clearBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clearBottom.Name = "clearBottom";
             this.clearBottom.Size = new System.Drawing.Size(0, 0);
             this.clearBottom.TabIndex = 4;
@@ -117,9 +121,10 @@
             // save
             // 
             this.save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.save.Location = new System.Drawing.Point(275, 530);
+            this.save.Location = new System.Drawing.Point(344, 662);
+            this.save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(75, 23);
+            this.save.Size = new System.Drawing.Size(94, 29);
             this.save.TabIndex = 5;
             this.save.Text = "Save...";
             this.toolTip1.SetToolTip(this.save, "Saves the text in the lower text box as a .lic or a .txt file\r\nto a location of t" +
@@ -130,11 +135,12 @@
             // clean
             // 
             this.clean.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.clean.Location = new System.Drawing.Point(428, 263);
+            this.clean.Location = new System.Drawing.Point(535, 329);
+            this.clean.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clean.Name = "clean";
-            this.clean.Size = new System.Drawing.Size(75, 23);
+            this.clean.Size = new System.Drawing.Size(94, 29);
             this.clean.TabIndex = 6;
-            this.clean.Text = "Clean";
+            this.clean.Text = "Parse";
             this.toolTip1.SetToolTip(this.clean, "When clicked, cleans the text in the upper text box using\r\npreviously defined lic" +
         "ense properties.");
             this.clean.UseVisualStyleBackColor = true;
@@ -142,13 +148,15 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenu,
             this.editMenu,
             this.helpMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(980, 28);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -160,14 +168,14 @@
             this.toolStripSeparator4,
             this.exit});
             this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(37, 20);
+            this.fileMenu.Size = new System.Drawing.Size(44, 24);
             this.fileMenu.Text = "File";
             // 
             // menuOpen
             // 
             this.menuOpen.Name = "menuOpen";
             this.menuOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.menuOpen.Size = new System.Drawing.Size(163, 22);
+            this.menuOpen.Size = new System.Drawing.Size(194, 26);
             this.menuOpen.Text = "Open...";
             this.menuOpen.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -175,20 +183,20 @@
             // 
             this.saveAs.Name = "saveAs";
             this.saveAs.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveAs.Size = new System.Drawing.Size(163, 22);
+            this.saveAs.Size = new System.Drawing.Size(194, 26);
             this.saveAs.Text = "Save As...";
             this.saveAs.Click += new System.EventHandler(this.saveAs_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(160, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(191, 6);
             // 
             // exit
             // 
             this.exit.Name = "exit";
             this.exit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.exit.Size = new System.Drawing.Size(163, 22);
+            this.exit.Size = new System.Drawing.Size(194, 26);
             this.exit.Text = "Exit";
             this.exit.Click += new System.EventHandler(this.exit_Click_1);
             // 
@@ -205,27 +213,27 @@
             this.toolStripSeparator1,
             this.preferences});
             this.editMenu.Name = "editMenu";
-            this.editMenu.Size = new System.Drawing.Size(39, 20);
+            this.editMenu.Size = new System.Drawing.Size(47, 24);
             this.editMenu.Text = "Edit";
             // 
             // undo
             // 
             this.undo.Name = "undo";
             this.undo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.undo.Size = new System.Drawing.Size(185, 22);
+            this.undo.Size = new System.Drawing.Size(219, 26);
             this.undo.Text = "Undo";
             this.undo.Click += new System.EventHandler(this.undo_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(182, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(216, 6);
             // 
             // cut
             // 
             this.cut.Name = "cut";
             this.cut.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cut.Size = new System.Drawing.Size(185, 22);
+            this.cut.Size = new System.Drawing.Size(219, 26);
             this.cut.Text = "Cut";
             this.cut.Click += new System.EventHandler(this.cut_Click);
             // 
@@ -233,7 +241,7 @@
             // 
             this.copy.Name = "copy";
             this.copy.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copy.Size = new System.Drawing.Size(185, 22);
+            this.copy.Size = new System.Drawing.Size(219, 26);
             this.copy.Text = "Copy";
             this.copy.Click += new System.EventHandler(this.copy_Click);
             // 
@@ -241,33 +249,33 @@
             // 
             this.paste.Name = "paste";
             this.paste.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.paste.Size = new System.Drawing.Size(185, 22);
+            this.paste.Size = new System.Drawing.Size(219, 26);
             this.paste.Text = "Paste";
             this.paste.Click += new System.EventHandler(this.paste_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(182, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(216, 6);
             // 
             // selectAll
             // 
             this.selectAll.Name = "selectAll";
             this.selectAll.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.selectAll.Size = new System.Drawing.Size(185, 22);
+            this.selectAll.Size = new System.Drawing.Size(219, 26);
             this.selectAll.Text = "Select All";
             this.selectAll.Click += new System.EventHandler(this.selectAll_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(182, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(216, 6);
             // 
             // preferences
             // 
             this.preferences.Name = "preferences";
             this.preferences.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.preferences.Size = new System.Drawing.Size(185, 22);
+            this.preferences.Size = new System.Drawing.Size(219, 26);
             this.preferences.Text = "Preferences...";
             this.preferences.Click += new System.EventHandler(this.preferences_Click_1);
             // 
@@ -276,24 +284,26 @@
             this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.about});
             this.helpMenu.Name = "helpMenu";
-            this.helpMenu.Size = new System.Drawing.Size(44, 20);
+            this.helpMenu.Size = new System.Drawing.Size(53, 24);
             this.helpMenu.Text = "Help";
             // 
             // about
             // 
             this.about.Name = "about";
             this.about.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.about.Size = new System.Drawing.Size(148, 22);
+            this.about.Size = new System.Drawing.Size(176, 26);
             this.about.Text = "About";
             this.about.Click += new System.EventHandler(this.about_Click);
             // 
             // status
             // 
+            this.status.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel});
-            this.status.Location = new System.Drawing.Point(0, 579);
+            this.status.Location = new System.Drawing.Point(0, 729);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(784, 22);
+            this.status.Padding = new System.Windows.Forms.Padding(1, 0, 18, 0);
+            this.status.Size = new System.Drawing.Size(980, 22);
             this.status.TabIndex = 10;
             // 
             // statusLabel
@@ -304,9 +314,10 @@
             // copyButton
             // 
             this.copyButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.copyButton.Location = new System.Drawing.Point(428, 530);
+            this.copyButton.Location = new System.Drawing.Point(535, 662);
+            this.copyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.copyButton.Name = "copyButton";
-            this.copyButton.Size = new System.Drawing.Size(75, 23);
+            this.copyButton.Size = new System.Drawing.Size(94, 29);
             this.copyButton.TabIndex = 11;
             this.copyButton.Text = "Copy";
             this.toolTip1.SetToolTip(this.copyButton, "Copies all of the text in the lower text box to the clipboard.");
@@ -321,10 +332,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(784, 601);
+            this.ClientSize = new System.Drawing.Size(980, 751);
             this.Controls.Add(this.copyButton);
             this.Controls.Add(this.status);
             this.Controls.Add(this.clean);
@@ -336,9 +347,10 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(3840, 2160);
-            this.MinimumSize = new System.Drawing.Size(800, 640);
+            this.MaximumSize = new System.Drawing.Size(4796, 2688);
+            this.MinimumSize = new System.Drawing.Size(996, 788);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "License Cleaner";

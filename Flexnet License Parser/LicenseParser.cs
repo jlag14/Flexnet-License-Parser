@@ -108,7 +108,7 @@ namespace LicenseParser
                             // !!!! CONSTRUCTION ZONE !!!!
 
                             // grab the block of text for the license
-                            text += Utilities.CheckEnd(line, i, parsedFile);
+                            text += Utilities.CheckEnd(i, parsedFile);
 
                             // The above line calls a method which currently determines what constitutes a license by running
                             // until an empty line is hit. However, this method should be changed to A: count the quotes,
@@ -161,7 +161,7 @@ namespace LicenseParser
                             {
                                 timeType = "Perpetual";
                             }
-                            else if (text.Contains("temporary") || text.Contains("non-extendable"))
+                            else if (text.Contains("temporary") || text.Contains("extendable"))
                             {
                                 timeType = "Term";
                             }
@@ -182,14 +182,22 @@ namespace LicenseParser
                             // jump over the expiration date to grab to the number of seats
                             if (!expirationDate.Equals("") && text.Contains(expirationDate))
                             {
-                                if (text[text.IndexOf(expirationDate) + expirationDate.Length + 1] >= '0' && text[text.IndexOf(expirationDate) + expirationDate.Length + 1] <= '9')
+                                // verify that we have a number here
+                                if (text[text.IndexOf(expirationDate) + expirationDate.Length + 1] >= '0' && 
+                                    text[text.IndexOf(expirationDate) + expirationDate.Length + 1] <= '9')
                                 {
-                                    numSeats += text[text.IndexOf(expirationDate) + expirationDate.Length + 1];
+                                    int numIndex = 1; // if the number is multiple digits long, gotta loop one by one
+                                    while (text[text.IndexOf(expirationDate) + expirationDate.Length + numIndex] >= '0' &&
+                                        text[text.IndexOf(expirationDate) + expirationDate.Length + numIndex] <= '9')
+                                    {
+                                        numSeats += text[text.IndexOf(expirationDate) + expirationDate.Length + numIndex];
+                                        numIndex++;
+                                    }
                                 }
                             }
                             else if (text.Contains("permanent"))
                             {
-                                int index = text.IndexOf("permanent") + "permanent".Length + 1;
+                                int index = text.IndexOf("permanent") + "permanent".Length + 1; // index of # seats
                                 while (text[index] >= '0' && text[index] <= '9')
                                 {
                                     numSeats += text[index];
@@ -268,7 +276,6 @@ namespace LicenseParser
                                             comps.Add("Unknown License");
                                         }
                                     }
-                                    Console.WriteLine("XX" + mysteryCode + "XX");
                                 }
                             }
                             ArrayList removes = comps;
@@ -285,7 +292,10 @@ namespace LicenseParser
                             }
                             LicenseChunk c = new LicenseChunk(text.Trim(), featCode, licName, featureType, timeType, expirationDate, numSeats, licType, removes);
                             chunks.Add(c);
-                            i = newIndex;
+
+                            // i automatically gets incremented at the next iteration of the loop;
+                            // decrement by one here to ensure we end up on the correct line
+                            i = newIndex - 1;
                         }
                     }
 

@@ -86,6 +86,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InvalidLicenseException.cs" />
     <Compile Include="LicensesNotFoundException.cs" />
     <Compile Include="FlexNetWords.cs" />
     <Compile Include="Form1.cs">

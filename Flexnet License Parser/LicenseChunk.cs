@@ -85,30 +85,31 @@ namespace LicenseParser
             String headerChar = ""; // header character
             String result = ""; // contains the entire output block
 
-            // The following code accesses user preferences from the Preferences form to properly format
-            // comments detailing the contents of a License (as selected by the user to display).
-            if (Form2.IndentedComments)
-            {
-                for (int loop = 0; loop < Form2.IndentSpaces; loop++)
-                {
-                    commentChar += " ";
-                }
-            }
-            commentChar += Form2.CommentChar.ToString();
-            headerChar += Form2.HeaderChar.ToString();
-            String headerPiece = "" + commentChar; // the header char is the one going across the top/bottom following the comment char
-            String space = "";
-            result += commentChar;
-            for (int i = 0; i < Form2.LeadingCommentSpace; i++)
-            {
-                space += " ";
-            }
-            result += space;
-
             // Print information in the following order:
             // License name, feature type (aka license type), perpetual/term, expiration date, number of seats, 
             if (Form2.AddComments)
             {
+                // The following code accesses user preferences from the Preferences form to properly format
+                // comments detailing the contents of a License (as selected by the user to display).
+                if (Form2.IndentedComments)
+                {
+                    for (int loop = 0; loop < Form2.IndentSpaces; loop++)
+                    {
+                        commentChar += " ";
+                    }
+                }
+                commentChar += Form2.CommentChar.ToString();
+                headerChar += Form2.HeaderChar.ToString();
+                String headerPiece = "" + commentChar; // the header char is the one going across the top/bottom following the comment char
+                String space = "";
+
+                result += commentChar;
+                for (int i = 0; i < Form2.LeadingCommentSpace; i++)
+                {
+                    space += " ";
+                }
+                result += space;
+
                 result += licenseName;
                 if (Form2.ShowFeatureTypes)
                 {
