@@ -262,7 +262,7 @@ namespace LicenseParser
                                     }
                                     else
                                     {
-                                        throw new InvalidLicenseException("Error: missing parentheses around components section detected" +
+                                        throw new InvalidLicenseException("Error: missing quotes around components section detected " +
                                             "at line " + i + ". Leading line was " + Environment.NewLine + line);
                                     }
                                 }

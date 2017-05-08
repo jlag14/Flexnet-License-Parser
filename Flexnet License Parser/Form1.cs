@@ -108,6 +108,10 @@ namespace LicenseParser
                 }
                 return;
             }
+            catch(InvalidLicenseException ile)
+            {
+                var result = MessageBox.Show(ile.Message, "Invalid License File", MessageBoxButtons.OK);
+            }
             if (keepthese.Count >= 1)
             {
                 int start = 0;
