@@ -42,7 +42,7 @@ namespace LicenseParser
         private void open_Click_1(object sender, EventArgs e)               //creates a default Windows open window and writes the data from the selected file into the input text box when the
         {                                                                   //open button is pressed. The name of the file is stored in licenseFileName, but does not expose the location of the file.
             OpenFileDialog openDialog = new OpenFileDialog();
-            openDialog.Filter = "Text Files | *.txt|License Files | *.lic";
+            openDialog.Filter = "License Files | *.lic|Text Files | *.txt";
             openDialog.ShowDialog();
 
             if (!string.IsNullOrEmpty(openDialog.FileName))
@@ -67,7 +67,7 @@ namespace LicenseParser
             saveDialog.OverwritePrompt = true;
             saveDialog.Title = "License Cleaner";
             saveDialog.ValidateNames = true;
-            saveDialog.Filter = "Text Files | *.txt|License Files | *.lic";
+            saveDialog.Filter = "License Files | *.lic";
 
             saveDialog.ShowDialog();
             using (StreamWriter writer = new StreamWriter(saveDialog.FileName))
@@ -132,6 +132,7 @@ namespace LicenseParser
         private void toolStripMenuItem1_Click(object sender, EventArgs e)       //this is the "Open" item from the "File" menu
         {
             OpenFileDialog openDialog = new OpenFileDialog();
+            openDialog.Filter = "License Files | *.lic|Text Files | *.txt";
             openDialog.ShowDialog();
             if (!string.IsNullOrEmpty(openDialog.FileName))
             {
@@ -154,7 +155,7 @@ namespace LicenseParser
             saveDialog.OverwritePrompt = true;
             saveDialog.Title = "License Cleaner";
             saveDialog.ValidateNames = true;
-            saveDialog.Filter = "Text Files | *.txt|License Files | *.lic";
+            saveDialog.Filter = "License Files | *.lic";
             saveDialog.ShowDialog();
             using (StreamWriter writer = new StreamWriter(saveDialog.FileName))
             {

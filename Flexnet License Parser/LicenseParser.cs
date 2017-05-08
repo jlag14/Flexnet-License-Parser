@@ -126,7 +126,7 @@ namespace LicenseParser
                                 {
                                     // the only time we wouldn't jump on a feature code match is if it's listed as a component, not
                                     // the license code itself
-                                    if (!(line.Contains("COMPONENT") && line.IndexOf(license.FeatureCode) >= line.IndexOf("COMPONENT")))
+                                    if (!(line.Contains("COMPONENTS") && line.IndexOf(license.FeatureCode) >= line.IndexOf("COMPONENTS")))
                                     {
                                         licName = license.LicenseName;
                                         featCode = license.FeatureCode;
@@ -156,6 +156,14 @@ namespace LicenseParser
                             if (licType.Equals("PACKAGE"))
                             {
                                 featureType = "Subscription Package";
+                            }
+                            else if (licType.Equals("INCREMENT"))
+                            {
+                                featureType = "Standalone";
+                            }
+                            else if (licType.Equals("INCREMENT PLIST"))
+                            {
+                                featureType = "Legacy - ignore";
                             }
                             if (text.Contains("permanent"))
                             {
@@ -205,60 +213,34 @@ namespace LicenseParser
                                 }
                             }
                             // parse components section
-                            if (text.Contains("COMPONENT"))
+                            if (text.Contains("COMPONENTS"))
                             {
                                 String mysteryCode = ""; // will hold a given component feature code
                                 bool added = false; // tracks whether or not we ID a given component
-                                int startIndex = text.IndexOf("COMPONENT"); // start from COMPONENT
+                                int startIndex = text.IndexOf("COMPONENTS"); // start from COMPONENTS
 
-                                // go from the first quote to the second one (quotes indicate the block)
-                                startIndex = text.IndexOf("\"", startIndex) + 1;
-                                while (!text[startIndex].ToString().Equals("\""))
+                                // indicates we have a 
+                                if (text[startIndex + "COMPONENTS".Length + 1] != '\"')
                                 {
-                                    added = false;
-                                    mysteryCode = "";
-                                    // eat characters until we hit a space to get the feature code
-                                    while (!text[startIndex].ToString().Equals(" ") && !text[startIndex].ToString().Equals("\""))
+                                    if (line.Contains("COMPONENTS") && parsedFile[i + 1].ToString().Trim().StartsWith("OPTIONS"))
                                     {
-                                        // handle the EOL character and the tab when COMPONENT list wraps around
-                                        if (!text[startIndex].ToString().Trim().Equals("") && !text[startIndex].ToString().Equals("\\"))
+                                        added = false;
+                                        mysteryCode = "";
+
+                                        while (!text[startIndex].ToString().Equals(" "))
                                         {
-                                            mysteryCode += text[startIndex];
-                                        }
-                                        startIndex++;
-                                    }
-                                    // make sure we didnt just run off the end of the license
-                                    if (text[startIndex].ToString().Equals(" "))
-                                    {
-                                        // make sure there weren't just two spaces in between components
-                                        if (mysteryCode.Trim().Length > 0)
-                                        {
-                                            // search our lookup file for matching name for the feature code we have
-                                            foreach (License lic in lics)
+                                            // handle the EOL character and the tab when COMPONENTS list wraps around
+                                            if (!text[startIndex].ToString().Trim().Equals("") && !text[startIndex].ToString().Equals("\\"))
                                             {
-                                                if (mysteryCode.Equals(lic.FeatureCode))
-                                                {
-                                                    if (!comps.Contains(lic.LicenseName))
-                                                    {
-                                                        comps.Add(lic.LicenseName);
-                                                    }
-                                                    // we mark the license as added as long as there's a match; if it wasn't added after
-                                                    // the match, it's a dupe and we don't need the extra print
-                                                    added = true;
-                                                    break;
-                                                }
+                                                mysteryCode += text[startIndex];
                                             }
-                                            // we didn't get a match
-                                            if (!added)
+                                            else
                                             {
-                                                comps.Add("Unknown License");
+                                                break;
                                             }
+                                            startIndex++;
                                         }
-                                        startIndex++;
-                                    }
-                                    // catch for when we hit the last component in the block
-                                    else if (text[startIndex].ToString().Equals("\""))
-                                    {
+
                                         foreach (License lic in lics)
                                         {
                                             if (mysteryCode.Equals(lic.FeatureCode))
@@ -267,6 +249,8 @@ namespace LicenseParser
                                                 {
                                                     comps.Add(lic.LicenseName);
                                                 }
+                                                // we mark the license as added as long as there's a match; if it wasn't added after
+                                                // the match, it's a dupe and we don't need the extra print
                                                 added = true;
                                                 break;
                                             }
@@ -274,6 +258,80 @@ namespace LicenseParser
                                         if (!added)
                                         {
                                             comps.Add("Unknown License");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        throw new InvalidLicenseException("Error: missing parentheses around components section detected" +
+                                            "at line " + i + ". Leading line was " + Environment.NewLine + line);
+                                    }
+                                }
+                                else
+                                {
+                                    // go from the first quote to the second one (quotes indicate the block)
+                                    startIndex = text.IndexOf("\"", startIndex) + 1;
+                                    while (!text[startIndex].ToString().Equals("\""))
+                                    {
+                                        added = false;
+                                        mysteryCode = "";
+                                        // eat characters until we hit a space to get the feature code
+                                        while (!text[startIndex].ToString().Equals(" ") && !text[startIndex].ToString().Equals("\""))
+                                        {
+                                            // handle the EOL character and the tab when COMPONENTS list wraps around
+                                            if (!text[startIndex].ToString().Trim().Equals("") && !text[startIndex].ToString().Equals("\\"))
+                                            {
+                                                mysteryCode += text[startIndex];
+                                            }
+                                            startIndex++;
+                                        }
+                                        // make sure we didnt just run off the end of the license
+                                        if (text[startIndex].ToString().Equals(" "))
+                                        {
+                                            // make sure there weren't just two spaces in between components
+                                            if (mysteryCode.Trim().Length > 0)
+                                            {
+                                                // search our lookup file for matching name for the feature code we have
+                                                foreach (License lic in lics)
+                                                {
+                                                    if (mysteryCode.Equals(lic.FeatureCode))
+                                                    {
+                                                        if (!comps.Contains(lic.LicenseName))
+                                                        {
+                                                            comps.Add(lic.LicenseName);
+                                                        }
+                                                        // we mark the license as added as long as there's a match; if it wasn't added after
+                                                        // the match, it's a dupe and we don't need the extra print
+                                                        added = true;
+                                                        break;
+                                                    }
+                                                }
+                                                // we didn't get a match
+                                                if (!added)
+                                                {
+                                                    comps.Add("Unknown License");
+                                                }
+                                            }
+                                            startIndex++;
+                                        }
+                                        // catch for when we hit the last component in the block
+                                        else if (text[startIndex].ToString().Equals("\""))
+                                        {
+                                            foreach (License lic in lics)
+                                            {
+                                                if (mysteryCode.Equals(lic.FeatureCode))
+                                                {
+                                                    if (!comps.Contains(lic.LicenseName))
+                                                    {
+                                                        comps.Add(lic.LicenseName);
+                                                    }
+                                                    added = true;
+                                                    break;
+                                                }
+                                            }
+                                            if (!added)
+                                            {
+                                                comps.Add("Unknown License");
+                                            }
                                         }
                                     }
                                 }
