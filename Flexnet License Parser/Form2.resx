@@ -179,7 +179,7 @@ is #, and spaces are represented by "&gt;" :
 preferences form to the registry under the current user.
 The path to the values after saving is:
 (From the registry)
-HKEY_CURRENT_USER--&gt;Software--&gt;MDi--&gt;License Cleaner
---&gt;1.0--&gt;Prefs</value>
+HKEY_CURRENT_USER--&gt;Software--&gt;MDi
+--&gt;Flexnet License Parser--&gt;1.0--&gt;Prefs</value>
   </data>
 </root>

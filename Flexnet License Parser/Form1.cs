@@ -62,10 +62,9 @@ namespace LicenseParser
             SaveFileDialog saveDialog = new SaveFileDialog();               //creates a default Windows save window and populates some default conditions when Save button is clicked
             saveDialog.DefaultExt = "lic";
             saveDialog.AddExtension = true;
-            saveDialog.FileName = "Cleaned_" + licenseFileName;
+            saveDialog.FileName = "Parsed_" + licenseFileName;
             saveDialog.InitialDirectory = Environment.SpecialFolder.UserProfile + "\\Documents\\";
             saveDialog.OverwritePrompt = true;
-            saveDialog.Title = "License Cleaner";
             saveDialog.ValidateNames = true;
             saveDialog.Filter = "License Files | *.lic";
 
@@ -154,10 +153,9 @@ namespace LicenseParser
             SaveFileDialog saveDialog = new SaveFileDialog();
             saveDialog.DefaultExt = "lic";
             saveDialog.AddExtension = true;
-            saveDialog.FileName = "Cleaned_" + licenseFileName;
+            saveDialog.FileName = "Parsed_" + licenseFileName;
             saveDialog.InitialDirectory = Environment.SpecialFolder.UserProfile + @"\Documents\";
             saveDialog.OverwritePrompt = true;
-            saveDialog.Title = "License Cleaner";
             saveDialog.ValidateNames = true;
             saveDialog.Filter = "License Files | *.lic";
             saveDialog.ShowDialog();

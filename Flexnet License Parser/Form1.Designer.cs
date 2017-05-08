@@ -353,7 +353,7 @@
             this.MinimumSize = new System.Drawing.Size(996, 788);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "License Cleaner";
+            this.Text = "Flexnet License Parser";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

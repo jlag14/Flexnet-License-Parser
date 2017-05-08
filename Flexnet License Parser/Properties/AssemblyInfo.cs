@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("License Cleaner")]
-[assembly: AssemblyDescription("Cleans and validates Flexera Flexnet license files")]
+[assembly: AssemblyTitle("Flexnet License Parser")]
+[assembly: AssemblyDescription("Documents and validates Flexera Flexnet license files")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MicroDeveloper, Inc.")]
-[assembly: AssemblyProduct("License Cleaner")]
+[assembly: AssemblyProduct("Flexnet License Parser")]
 [assembly: AssemblyCopyright("Copyright © MicroDeveloper, Inc. 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
