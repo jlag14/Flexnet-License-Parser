@@ -9,7 +9,7 @@ namespace LicenseParser
     public partial class PrefsForm : Form
     {
         // comment content variables
-        private static bool addComments = true;
+        private static bool addComments = true; // whether user wants documentation or not
         private static bool showFeatureTypes = false;
         private static bool showLicenseTypes = false;
         private static bool showNumberOfSeats = false;
@@ -17,21 +17,21 @@ namespace LicenseParser
 
         // comment formatting variables
         private static char commentChar = '#';
-        private static int leadingCommentSpace = 1;
+        private static int leadingCommentSpace = 1; // # spaces from a comment character to comment content
         private static bool indentedComments = false;
-        private static int indentSpaces = 4;
+        private static int indentSpaces = 4; // # spaces preceeding each comment character
 
         // header formatting variables
         private static char headerChar = '=';
         private static bool commentHeaders = true;
         private static bool fixedHeaderLength = false;
         private static bool variableHeaderLength = true;
-        private static int fixedCommentLength = 10;
+        private static int fixedCommentLength = 10; // length of fixed headers (if enabled)
 
         // misc. variables
         private static bool keepComments = false;
-        private static bool keepBreaks = false;
-        private static string licenseMetaXMLPath = "";
+        private static bool keepBreaks = false; // whether we keep line breaks or not
+        private static string licenseMetaXMLPath = ""; // explicit path to the XML lookup file
 
         // Accessors for all of the above variables.
         // Since other classes need to know the user prefs for parsing but can't access the values of the checkboxes/etc.
@@ -60,13 +60,37 @@ namespace LicenseParser
             InitializeComponent();
         }
 
+        // Recurses down to our intended save directory, assuming the paramter reg is the HKEY_CURRENT_USER registry key.
+        // Our intended save directory is HKEY_CURRENT_USER/SOFTWARE/MDi/Flexnet License Parser/1.0/Prefs
+        // As long as it finds the SOFTWARE registry key, this method will create any missing subkeys.
+        private static RegistryKey registryRecurse(RegistryKey reg)
+        {
+            RegistryKey temp = null; // our returned key
+            foreach (String s in reg.GetSubKeyNames())
+            {
+                // create registry tree
+                if (s.Equals("Software") || s.Equals("SOFTWARE"))
+                {
+                    temp = reg.OpenSubKey(s, true);
+                    temp = temp.CreateSubKey("MDi");
+                    temp = temp.CreateSubKey("Flexnet License Parser");
+                    temp = temp.CreateSubKey("1.0");
+                    temp = temp.CreateSubKey("Prefs");
+                    break;
+                }
+            }
+            return temp;
+        }
+
         // Restores all form objects, registry values, and class variables to their default values.
         // Called when there is a problem / missing value found when attempting to access the registry.
         public void CreateDefault()
         {
+            // get our save location
             RegistryKey rkHKCU = Registry.CurrentUser;
-            RegistryKey rkRun;
+            RegistryKey rkRun = registryRecurse(rkHKCU);
 
+            // set class variable values
             showFeatureTypes = false;
             showLicenseTypes = false;
             showNumberOfSeats = false;
@@ -88,7 +112,8 @@ namespace LicenseParser
             variableHeaderLength = true;
             fixedCommentLength = 10;
 
-            rkRun = recurse(rkHKCU);
+            // set registry values
+            
             rkRun.SetValue("KeepComments", keepComments);
             rkRun.SetValue("KeepBreaks", keepBreaks);
             rkRun.SetValue("AddComments", addComments);
@@ -109,6 +134,7 @@ namespace LicenseParser
             rkRun.SetValue("SpacesInIndentEnabled", indentedComments);
             rkRun.SetValue("LicenseMetaXMLPath", licenseMetaXMLPath);
 
+            // set form object values
             featureTypes.Checked = false;
             licenseTypes.Checked = false;
             numberSeats.Checked = false;
@@ -134,13 +160,18 @@ namespace LicenseParser
             rkRun.Close();
         }
 
+        // Loads the values from the registry into our class variables. Loads default values if a value is missing.
+        // Called when the program initially starts (i.e. the MainMenu is opened).
         public static void StartUp()
         {
             try
             {
+                // get registry save location
                 RegistryKey rkHKCU = Registry.CurrentUser;
-                RegistryKey key = originalRecurse(rkHKCU);
-                RegistryKey rkRun = key;
+                RegistryKey rkRun = registryRecurse(rkHKCU);
+
+                // update class variables, but we don't need to edit form objects since the form isn't opening yet
+
                 keepComments = Convert.ToBoolean(rkRun.GetValue("KeepComments").ToString());
                 keepBreaks = Convert.ToBoolean(rkRun.GetValue("KeepBreaks").ToString());
                 addComments = Convert.ToBoolean(rkRun.GetValue("AddComments").ToString());
@@ -160,6 +191,7 @@ namespace LicenseParser
 
                 licenseMetaXMLPath = rkRun.GetValue("LicenseMetaXMLPath").ToString();
             }
+            // set everything to defaults if there was a problem locating registry values
             catch (NullReferenceException e)
             {
                 showFeatureTypes = false;
@@ -185,13 +217,17 @@ namespace LicenseParser
             }
         }
 
+        // This method is called whenever the user selects Preferences from the MainMenu. We update the form objects when
+        // we open the form, but we don't need to change any class variables unless the user saves.
         public void Open()
         {
             try
             {
+                // get registry save location
                 RegistryKey rkHKCU = Registry.CurrentUser;
-                RegistryKey key = recurse(rkHKCU);
-                RegistryKey rkRun = key;
+                RegistryKey rkRun = registryRecurse(rkHKCU);
+
+                // update form objects
                 comments2.Checked = Convert.ToBoolean(rkRun.GetValue("KeepComments").ToString());
                 linebreaks2.Checked = Convert.ToBoolean(rkRun.GetValue("KeepBreaks").ToString());
                 addCommentsBox.Checked = Convert.ToBoolean(rkRun.GetValue("AddComments").ToString());
@@ -226,8 +262,6 @@ namespace LicenseParser
                 XMLPathBox.Text = rkRun.GetValue("LicenseMetaXMLPath").ToString();
 
                 rkRun.Close();
-
-                key.Close();
                 rkHKCU.Close();
             }
             catch (NullReferenceException e)
@@ -237,10 +271,14 @@ namespace LicenseParser
             }
         }
 
+        // When we save, update the registry and our class variables (since the user has now confirmed changes).
         public void Save()
         {
+            // get registry save path
             RegistryKey rkHKCU = Registry.CurrentUser;
-            RegistryKey rkRun = recurse(rkHKCU);
+            RegistryKey rkRun = registryRecurse(rkHKCU);
+
+            // save form values to registry
             rkRun.SetValue("KeepComments", comments2.Checked);
             rkRun.SetValue("KeepBreaks", linebreaks2.Checked);
             rkRun.SetValue("AddComments", addCommentsBox.Checked);
@@ -265,6 +303,7 @@ namespace LicenseParser
             rkHKCU.Close();
             rkRun.Close();
 
+            // update class variables
             showFeatureTypes = featureTypes.Checked;
             keepComments = comments2.Checked;
             keepBreaks = linebreaks2.Checked;
@@ -292,10 +331,11 @@ namespace LicenseParser
         {
             licenseMetaXMLPath = newPath;
             RegistryKey rkHKCU = Registry.CurrentUser;
-            RegistryKey rkRun = originalRecurse(rkHKCU);
+            RegistryKey rkRun = registryRecurse(rkHKCU);
             rkRun.SetValue("LicenseMetaXMLPath", LicenseMetaXMLPath);
         }
 
+        // Enable/disable comment customization options depending on whether the user wants comments or not
         private void addComments_Click(object sender, EventArgs e)
         {
             if (addCommentsBox.Checked)
@@ -320,24 +360,25 @@ namespace LicenseParser
             
         }
 
+        // Allows the user to set the length of fixed length headers when that option is selected
         private void fixedLength_Click(object sender, EventArgs e)
         {
             if (fixedLength.Checked)
             {
                 fixedNumber.Visible = true;
-            }
-            
+            }            
         }
 
+        // When user switches back to variable length headers, we don't need to see the fixed length # anymore
         private void variableLength_Click(object sender, EventArgs e)
         {
             if (variableLength.Checked)
             {
                 fixedNumber.Visible = false;
-            }
-            
+            }            
         }
 
+        // Enable/disable header length box depending on whether user wants headers
         private void headers_Click(object sender, EventArgs e)
         {
             if (headers.Checked)
@@ -347,10 +388,10 @@ namespace LicenseParser
             else
             {
                 headerLengthBox.Enabled = false;
-            }
-            
+            }            
         }
 
+        // Enable/disable the box for # of spaces before comments depending on user prefs
         private void indentedComments_Click(object sender, EventArgs e)
         {
             if (indentedCommentsBox.Checked)
@@ -360,36 +401,13 @@ namespace LicenseParser
             else
             {
                 numberOfSpacesPerIndent.Enabled = false;
-            }
-            
+            }            
         }
 
-        private void XMLPathBox_TextChanged(object sender, EventArgs e)
-        {
-            licenseMetaXMLPath = XMLPathBox.Text;
-        }
-
+        // If the user clicks reset, change all the values of the form objects back to their defaults, 
+        // but don't save anything to class variables or registries until the user hits Save.
         private void reset_Click(object sender, EventArgs e)
         {
-              showFeatureTypes = false;
-              showLicenseTypes = false;
-              showNumberOfSeats = false;
-              listSubComponents = false;
-
-              commentChar = '#';
-              headerChar = '=';
-              leadingCommentSpace = 1;
-              indentSpaces = 4;
-
-              indentedComments = false;
-              keepComments = false;
-              keepBreaks = false;
-              addComments = true;
-              commentHeaders = true;
-              fixedHeaderLength = false;
-              variableHeaderLength = true;
-              fixedCommentLength = 10;
-
               featureTypes.Checked = false;
               licenseTypes.Checked = false;
               numberSeats.Checked = false;
@@ -410,55 +428,21 @@ namespace LicenseParser
               fixedNumber.Value = 10;              
         }
 
+        // Called when the user clicks "Save" on the form
         private void savePrefs_Click(object sender, EventArgs e)
         {
             this.Save();
             this.Close();
         }
 
-        private RegistryKey recurse(RegistryKey reg)
-        {
-            RegistryKey rk = reg;
-            RegistryKey temp = null;
-            foreach (String s in reg.GetSubKeyNames())
-            {
-                if (s.Equals("Software") || s.Equals("SOFTWARE"))
-                {
-                    temp = reg.OpenSubKey(s, true);
-                    temp = temp.CreateSubKey("MDi");
-                    temp = temp.CreateSubKey("Flexnet License Parser");
-                    temp = temp.CreateSubKey("1.0");
-                    temp = temp.CreateSubKey("Prefs");
-                    break;
-                }
-            }
-            return temp;
-        }
-
-        private static RegistryKey originalRecurse(RegistryKey reg)
-        {
-            RegistryKey rk = reg;
-            RegistryKey temp = null;
-            foreach (String s in reg.GetSubKeyNames())
-            {
-                if (s.Equals("Software") || s.Equals("SOFTWARE"))
-                {
-                    temp = reg.OpenSubKey(s, true);
-                    temp = temp.CreateSubKey("MDi");
-                    temp = temp.CreateSubKey("Flexnet License Parser");
-                    temp = temp.CreateSubKey("1.0");
-                    temp = temp.CreateSubKey("Prefs");
-                    break;
-                }
-            }
-            return temp;
-        }
-
+        // If the user cancels out, just exit without saving anything
         private void cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // Called when the user selects an XML lookup file on the form. Allows the user to select the file with the
+        // standard Windows open file window. Doesn't save the new path, as that only should occur if the user presses "Save."
         private void selectXML_Click(object sender, EventArgs e)
         {
             OpenFileDialog openDialog = new OpenFileDialog();
