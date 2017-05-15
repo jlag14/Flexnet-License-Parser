@@ -87,38 +87,38 @@ namespace LicenseParser
 
             // Print information in the following order:
             // License name, feature type (aka license type), perpetual/term, expiration date, number of seats, 
-            if (Form2.AddComments)
+            if (PrefsForm.AddComments)
             {
                 // The following code accesses user preferences from the Preferences form to properly format
                 // comments detailing the contents of a License (as selected by the user to display).
-                if (Form2.IndentedComments)
+                if (PrefsForm.IndentedComments)
                 {
-                    for (int loop = 0; loop < Form2.IndentSpaces; loop++)
+                    for (int loop = 0; loop < PrefsForm.IndentSpaces; loop++)
                     {
                         commentChar += " ";
                     }
                 }
-                commentChar += Form2.CommentChar.ToString();
-                headerChar += Form2.HeaderChar.ToString();
+                commentChar += PrefsForm.CommentChar.ToString();
+                headerChar += PrefsForm.HeaderChar.ToString();
                 String headerPiece = "" + commentChar; // the header char is the one going across the top/bottom following the comment char
                 String space = "";
 
                 result += commentChar;
-                for (int i = 0; i < Form2.LeadingCommentSpace; i++)
+                for (int i = 0; i < PrefsForm.LeadingCommentSpace; i++)
                 {
                     space += " ";
                 }
                 result += space;
 
                 result += licenseName;
-                if (Form2.ShowFeatureTypes)
+                if (PrefsForm.ShowFeatureTypes)
                 {
                     if (featureType != null)
                     {
                         result += " " + featureType;
                     }
                 }
-                if (Form2.ShowLicenseTypes)
+                if (PrefsForm.ShowLicenseTypes)
                 {
                     result += ", " + timeType;
                     if (timeType.Equals("Temporary"))
@@ -126,7 +126,7 @@ namespace LicenseParser
                         result += " (Expires " + expirationDate + ")";
                     }
                 }
-                if (Form2.ShowNumberOfSeats)
+                if (PrefsForm.ShowNumberOfSeats)
                 {
                     if (!String.IsNullOrEmpty(numSeats))
                     {
@@ -154,9 +154,9 @@ namespace LicenseParser
                 result = "";
 
                 // add top line
-                if (Form2.CommentHeaders)
+                if (PrefsForm.CommentHeaders)
                 {
-                    if (Form2.VariableHeaderLength)
+                    if (PrefsForm.VariableHeaderLength)
                     {
                         for (int i = 0; i < length; i++)
                         {
@@ -164,9 +164,9 @@ namespace LicenseParser
                         }
                         result += Environment.NewLine + headerPiece;
                     }
-                    else if (Form2.FixedHeaderLength)
+                    else if (PrefsForm.FixedHeaderLength)
                     {
-                        for (int i = 0; i < Form2.FixedCommentLength; i++)
+                        for (int i = 0; i < PrefsForm.FixedCommentLength; i++)
                         {
                             headerPiece += headerChar;
                         }
@@ -176,7 +176,7 @@ namespace LicenseParser
                 result += Environment.NewLine + holder + Environment.NewLine;
                 
                 // check if components should be listed; indent them in a list
-                if (Form2.listSubComponents)
+                if (PrefsForm.ListSubComponents)
                 {
                     foreach (object obj in components)
                     {
@@ -185,13 +185,13 @@ namespace LicenseParser
                 }
 
                 // add footer line
-                if (Form2.CommentHeaders)
+                if (PrefsForm.CommentHeaders)
                 {
-                    if (Form2.VariableHeaderLength)
+                    if (PrefsForm.VariableHeaderLength)
                     {
                         result += headerPiece + Environment.NewLine + Environment.NewLine;
                     }
-                    else if (Form2.FixedHeaderLength)
+                    else if (PrefsForm.FixedHeaderLength)
                     {
                         result += headerPiece + Environment.NewLine + Environment.NewLine;
                     }

@@ -1,6 +1,6 @@
 ﻿namespace LicenseParser
 {
-    partial class Form2
+    partial class PrefsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrefsForm));
             this.comments2 = new System.Windows.Forms.CheckBox();
             this.linebreaks2 = new System.Windows.Forms.CheckBox();
-            this.addComments = new System.Windows.Forms.CheckBox();
+            this.addCommentsBox = new System.Windows.Forms.CheckBox();
             this.headers = new System.Windows.Forms.CheckBox();
             this.commentContent = new System.Windows.Forms.GroupBox();
             this.subComponents = new System.Windows.Forms.CheckBox();
             this.numberSeats = new System.Windows.Forms.CheckBox();
             this.licenseTypes = new System.Windows.Forms.CheckBox();
             this.featureTypes = new System.Windows.Forms.CheckBox();
-            this.headerChar = new System.Windows.Forms.TextBox();
+            this.headerCharBox = new System.Windows.Forms.TextBox();
             this.headerCharLabel = new System.Windows.Forms.Label();
             this.commentCharLabel = new System.Windows.Forms.Label();
-            this.commentChar = new System.Windows.Forms.TextBox();
-            this.leadingCommentSpace = new System.Windows.Forms.NumericUpDown();
+            this.commentCharBox = new System.Windows.Forms.TextBox();
+            this.leadingCommentSpaceVal = new System.Windows.Forms.NumericUpDown();
             this.variableLength = new System.Windows.Forms.RadioButton();
             this.fixedNumber = new System.Windows.Forms.NumericUpDown();
             this.fixedLength = new System.Windows.Forms.RadioButton();
@@ -51,19 +51,20 @@
             this.commentSpaceLabel = new System.Windows.Forms.Label();
             this.indentSpacesLabel = new System.Windows.Forms.Label();
             this.numberOfSpacesPerIndent = new System.Windows.Forms.NumericUpDown();
-            this.indentedComments = new System.Windows.Forms.CheckBox();
+            this.indentedCommentsBox = new System.Windows.Forms.CheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.reset = new System.Windows.Forms.Button();
             this.savePrefs = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
             this.generalOptions = new System.Windows.Forms.GroupBox();
+            this.selectXML = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.XMLPathBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.commentOptions = new System.Windows.Forms.GroupBox();
             this.headerOptions = new System.Windows.Forms.GroupBox();
             this.commentContent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.leadingCommentSpace)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leadingCommentSpaceVal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fixedNumber)).BeginInit();
             this.headerLengthBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numberOfSpacesPerIndent)).BeginInit();
@@ -84,7 +85,6 @@
             this.comments2.Text = "Keep Existing Comments?";
             this.toolTip1.SetToolTip(this.comments2, resources.GetString("comments2.ToolTip"));
             this.comments2.UseVisualStyleBackColor = true;
-            this.comments2.Click += new System.EventHandler(this.comments2_Click);
             // 
             // linebreaks2
             // 
@@ -97,21 +97,20 @@
             this.linebreaks2.Text = "Keep Existing Line Breaks?";
             this.toolTip1.SetToolTip(this.linebreaks2, resources.GetString("linebreaks2.ToolTip"));
             this.linebreaks2.UseVisualStyleBackColor = true;
-            this.linebreaks2.Click += new System.EventHandler(this.linebreaks2_Click);
             // 
-            // addComments
+            // addCommentsBox
             // 
-            this.addComments.AutoSize = true;
-            this.addComments.Location = new System.Drawing.Point(8, 23);
-            this.addComments.Margin = new System.Windows.Forms.Padding(4);
-            this.addComments.Name = "addComments";
-            this.addComments.Size = new System.Drawing.Size(215, 21);
-            this.addComments.TabIndex = 11;
-            this.addComments.Text = "Add License Documentation?";
-            this.toolTip1.SetToolTip(this.addComments, "When checked, allows comments to be created which \r\ncontain the details of each l" +
+            this.addCommentsBox.AutoSize = true;
+            this.addCommentsBox.Location = new System.Drawing.Point(8, 23);
+            this.addCommentsBox.Margin = new System.Windows.Forms.Padding(4);
+            this.addCommentsBox.Name = "addCommentsBox";
+            this.addCommentsBox.Size = new System.Drawing.Size(215, 21);
+            this.addCommentsBox.TabIndex = 11;
+            this.addCommentsBox.Text = "Add License Documentation?";
+            this.toolTip1.SetToolTip(this.addCommentsBox, "When checked, allows comments to be created which \r\ncontain the details of each l" +
         "icense.");
-            this.addComments.UseVisualStyleBackColor = true;
-            this.addComments.Click += new System.EventHandler(this.addComments_Click);
+            this.addCommentsBox.UseVisualStyleBackColor = true;
+            this.addCommentsBox.Click += new System.EventHandler(this.addComments_Click);
             // 
             // headers
             // 
@@ -154,7 +153,6 @@
             this.toolTip1.SetToolTip(this.subComponents, "When checked, an indented and commented list of the\r\nsub-components in a license " +
         "(if any) will be displayed as\r\npart of the documentation comment.");
             this.subComponents.UseVisualStyleBackColor = true;
-            this.subComponents.Click += new System.EventHandler(this.subComponents_Click);
             // 
             // numberSeats
             // 
@@ -167,7 +165,6 @@
             this.numberSeats.Text = "Include Number of Seats?";
             this.toolTip1.SetToolTip(this.numberSeats, "Displays the number of seats held by the given license.");
             this.numberSeats.UseVisualStyleBackColor = true;
-            this.numberSeats.Click += new System.EventHandler(this.numberSeats_Click);
             // 
             // licenseTypes
             // 
@@ -181,7 +178,6 @@
             this.toolTip1.SetToolTip(this.licenseTypes, "Displays whether a license is permanent or temporary. If\r\na license is temporary," +
         " its expiration date is also shown.");
             this.licenseTypes.UseVisualStyleBackColor = true;
-            this.licenseTypes.Click += new System.EventHandler(this.licenseTypes_Click);
             // 
             // featureTypes
             // 
@@ -194,18 +190,16 @@
             this.featureTypes.Text = "Include Feature Types?";
             this.toolTip1.SetToolTip(this.featureTypes, "Displays whether or not a license is a Subscription\r\nPackage in a documentation.");
             this.featureTypes.UseVisualStyleBackColor = true;
-            this.featureTypes.Click += new System.EventHandler(this.featureTypes_Click);
             // 
-            // headerChar
+            // headerCharBox
             // 
-            this.headerChar.Location = new System.Drawing.Point(17, 26);
-            this.headerChar.Margin = new System.Windows.Forms.Padding(4);
-            this.headerChar.MaxLength = 1;
-            this.headerChar.Name = "headerChar";
-            this.headerChar.Size = new System.Drawing.Size(25, 22);
-            this.headerChar.TabIndex = 17;
-            this.headerChar.Text = "=";
-            this.headerChar.TextChanged += new System.EventHandler(this.headerChar_TextChanged);
+            this.headerCharBox.Location = new System.Drawing.Point(17, 26);
+            this.headerCharBox.Margin = new System.Windows.Forms.Padding(4);
+            this.headerCharBox.MaxLength = 1;
+            this.headerCharBox.Name = "headerCharBox";
+            this.headerCharBox.Size = new System.Drawing.Size(25, 22);
+            this.headerCharBox.TabIndex = 17;
+            this.headerCharBox.Text = "=";
             // 
             // headerCharLabel
             // 
@@ -230,37 +224,35 @@
             this.commentCharLabel.Text = "Comment Character";
             this.toolTip1.SetToolTip(this.commentCharLabel, resources.GetString("commentCharLabel.ToolTip"));
             // 
-            // commentChar
+            // commentCharBox
             // 
-            this.commentChar.Location = new System.Drawing.Point(17, 59);
-            this.commentChar.Margin = new System.Windows.Forms.Padding(4);
-            this.commentChar.MaxLength = 1;
-            this.commentChar.Name = "commentChar";
-            this.commentChar.Size = new System.Drawing.Size(25, 22);
-            this.commentChar.TabIndex = 20;
-            this.commentChar.Text = "#";
-            this.commentChar.TextChanged += new System.EventHandler(this.commentChar_TextChanged);
+            this.commentCharBox.Location = new System.Drawing.Point(17, 59);
+            this.commentCharBox.Margin = new System.Windows.Forms.Padding(4);
+            this.commentCharBox.MaxLength = 1;
+            this.commentCharBox.Name = "commentCharBox";
+            this.commentCharBox.Size = new System.Drawing.Size(25, 22);
+            this.commentCharBox.TabIndex = 20;
+            this.commentCharBox.Text = "#";
             // 
-            // leadingCommentSpace
+            // leadingCommentSpaceVal
             // 
-            this.leadingCommentSpace.Location = new System.Drawing.Point(32, 225);
-            this.leadingCommentSpace.Margin = new System.Windows.Forms.Padding(4);
-            this.leadingCommentSpace.Maximum = new decimal(new int[] {
+            this.leadingCommentSpaceVal.Location = new System.Drawing.Point(32, 225);
+            this.leadingCommentSpaceVal.Margin = new System.Windows.Forms.Padding(4);
+            this.leadingCommentSpaceVal.Maximum = new decimal(new int[] {
             25,
             0,
             0,
             0});
-            this.leadingCommentSpace.Name = "leadingCommentSpace";
-            this.leadingCommentSpace.Size = new System.Drawing.Size(61, 22);
-            this.leadingCommentSpace.TabIndex = 17;
-            this.toolTip1.SetToolTip(this.leadingCommentSpace, "The number of spaces between a comment character\r\nand a documentation. See the \"L" +
+            this.leadingCommentSpaceVal.Name = "leadingCommentSpaceVal";
+            this.leadingCommentSpaceVal.Size = new System.Drawing.Size(61, 22);
+            this.leadingCommentSpaceVal.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.leadingCommentSpaceVal, "The number of spaces between a comment character\r\nand a documentation. See the \"L" +
         "eading Comment Space\"\r\ntooltip (hover over the label to view).");
-            this.leadingCommentSpace.Value = new decimal(new int[] {
+            this.leadingCommentSpaceVal.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.leadingCommentSpace.ValueChanged += new System.EventHandler(this.leadingCommentSpace_ValueChanged);
             // 
             // variableLength
             // 
@@ -291,7 +283,6 @@
             0,
             0});
             this.fixedNumber.Visible = false;
-            this.fixedNumber.ValueChanged += new System.EventHandler(this.fixedNumber_ValueChanged);
             // 
             // fixedLength
             // 
@@ -369,21 +360,20 @@
             0,
             0,
             0});
-            this.numberOfSpacesPerIndent.ValueChanged += new System.EventHandler(this.numberOfSpacesPerIndent_ValueChanged);
             // 
-            // indentedComments
+            // indentedCommentsBox
             // 
-            this.indentedComments.AutoSize = true;
-            this.indentedComments.Location = new System.Drawing.Point(5, 257);
-            this.indentedComments.Margin = new System.Windows.Forms.Padding(4);
-            this.indentedComments.Name = "indentedComments";
-            this.indentedComments.Size = new System.Drawing.Size(230, 21);
-            this.indentedComments.TabIndex = 27;
-            this.indentedComments.Text = "Add Spaces Before Comments?";
-            this.toolTip1.SetToolTip(this.indentedComments, "When checked, allows spaces to be added in front of\r\nthe comment characters on do" +
+            this.indentedCommentsBox.AutoSize = true;
+            this.indentedCommentsBox.Location = new System.Drawing.Point(5, 257);
+            this.indentedCommentsBox.Margin = new System.Windows.Forms.Padding(4);
+            this.indentedCommentsBox.Name = "indentedCommentsBox";
+            this.indentedCommentsBox.Size = new System.Drawing.Size(230, 21);
+            this.indentedCommentsBox.TabIndex = 27;
+            this.indentedCommentsBox.Text = "Add Spaces Before Comments?";
+            this.toolTip1.SetToolTip(this.indentedCommentsBox, "When checked, allows spaces to be added in front of\r\nthe comment characters on do" +
         "cumentation and header\r\nlines.");
-            this.indentedComments.UseVisualStyleBackColor = true;
-            this.indentedComments.Click += new System.EventHandler(this.indentedComments_Click);
+            this.indentedCommentsBox.UseVisualStyleBackColor = true;
+            this.indentedCommentsBox.Click += new System.EventHandler(this.indentedComments_Click);
             // 
             // toolTip1
             // 
@@ -432,6 +422,7 @@
             // 
             // generalOptions
             // 
+            this.generalOptions.Controls.Add(this.selectXML);
             this.generalOptions.Controls.Add(this.label1);
             this.generalOptions.Controls.Add(this.XMLPathBox);
             this.generalOptions.Controls.Add(this.groupBox1);
@@ -441,10 +432,20 @@
             this.generalOptions.Margin = new System.Windows.Forms.Padding(4);
             this.generalOptions.Name = "generalOptions";
             this.generalOptions.Padding = new System.Windows.Forms.Padding(4);
-            this.generalOptions.Size = new System.Drawing.Size(276, 256);
+            this.generalOptions.Size = new System.Drawing.Size(276, 298);
             this.generalOptions.TabIndex = 30;
             this.generalOptions.TabStop = false;
             this.generalOptions.Text = "General Options";
+            // 
+            // selectXML
+            // 
+            this.selectXML.Location = new System.Drawing.Point(5, 257);
+            this.selectXML.Name = "selectXML";
+            this.selectXML.Size = new System.Drawing.Size(100, 28);
+            this.selectXML.TabIndex = 36;
+            this.selectXML.Text = "Select File";
+            this.selectXML.UseVisualStyleBackColor = true;
+            this.selectXML.Click += new System.EventHandler(this.selectXML_Click);
             // 
             // label1
             // 
@@ -466,9 +467,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.headerCharLabel);
-            this.groupBox1.Controls.Add(this.headerChar);
+            this.groupBox1.Controls.Add(this.headerCharBox);
             this.groupBox1.Controls.Add(this.commentCharLabel);
-            this.groupBox1.Controls.Add(this.commentChar);
+            this.groupBox1.Controls.Add(this.commentCharBox);
             this.groupBox1.Location = new System.Drawing.Point(9, 80);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -480,12 +481,12 @@
             // 
             // commentOptions
             // 
-            this.commentOptions.Controls.Add(this.addComments);
+            this.commentOptions.Controls.Add(this.addCommentsBox);
             this.commentOptions.Controls.Add(this.commentContent);
             this.commentOptions.Controls.Add(this.commentSpaceLabel);
-            this.commentOptions.Controls.Add(this.leadingCommentSpace);
+            this.commentOptions.Controls.Add(this.leadingCommentSpaceVal);
             this.commentOptions.Controls.Add(this.numberOfSpacesPerIndent);
-            this.commentOptions.Controls.Add(this.indentedComments);
+            this.commentOptions.Controls.Add(this.indentedCommentsBox);
             this.commentOptions.Controls.Add(this.indentSpacesLabel);
             this.commentOptions.Location = new System.Drawing.Point(291, 9);
             this.commentOptions.Margin = new System.Windows.Forms.Padding(4);
@@ -509,7 +510,7 @@
             this.headerOptions.TabStop = false;
             this.headerOptions.Text = "Header Options";
             // 
-            // Form2
+            // PrefsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -526,12 +527,12 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form2";
+            this.Name = "PrefsForm";
             this.Text = "Preferences";
             this.TopMost = true;
             this.commentContent.ResumeLayout(false);
             this.commentContent.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.leadingCommentSpace)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leadingCommentSpaceVal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fixedNumber)).EndInit();
             this.headerLengthBox.ResumeLayout(false);
             this.headerLengthBox.PerformLayout();
@@ -552,18 +553,18 @@
 
         private System.Windows.Forms.CheckBox comments2;
         private System.Windows.Forms.CheckBox linebreaks2;
-        private System.Windows.Forms.CheckBox addComments;
+        private System.Windows.Forms.CheckBox addCommentsBox;
         private System.Windows.Forms.CheckBox headers;
         private System.Windows.Forms.GroupBox commentContent;
         private System.Windows.Forms.CheckBox subComponents;
         private System.Windows.Forms.CheckBox numberSeats;
         private System.Windows.Forms.CheckBox licenseTypes;
         private System.Windows.Forms.CheckBox featureTypes;
-        private System.Windows.Forms.TextBox headerChar;
+        private System.Windows.Forms.TextBox headerCharBox;
         private System.Windows.Forms.Label headerCharLabel;
         private System.Windows.Forms.Label commentCharLabel;
-        private System.Windows.Forms.TextBox commentChar;
-        private System.Windows.Forms.NumericUpDown leadingCommentSpace;
+        private System.Windows.Forms.TextBox commentCharBox;
+        private System.Windows.Forms.NumericUpDown leadingCommentSpaceVal;
         private System.Windows.Forms.RadioButton variableLength;
         private System.Windows.Forms.NumericUpDown fixedNumber;
         private System.Windows.Forms.RadioButton fixedLength;
@@ -571,7 +572,7 @@
         private System.Windows.Forms.Label commentSpaceLabel;
         private System.Windows.Forms.Label indentSpacesLabel;
         private System.Windows.Forms.NumericUpDown numberOfSpacesPerIndent;
-        private System.Windows.Forms.CheckBox indentedComments;
+        private System.Windows.Forms.CheckBox indentedCommentsBox;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button reset;
         private System.Windows.Forms.Button savePrefs;
@@ -582,5 +583,6 @@
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.TextBox XMLPathBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button selectXML;
     }
 }

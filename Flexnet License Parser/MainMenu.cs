@@ -1,37 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.Threading;
 using System.IO;
 using Microsoft.Win32;
 using System.Collections;
-using System.Xml;
 
 namespace LicenseParser
 {
-    public partial class Form1 : Form
+    // This is the main form which the user interacts with. This class contains the event handlers for all
+    // the various buttons and actions the user can perform on the form.
+    public partial class MainMenu : Form
     {
-        private String licenseFileName = "";
-        private string cleanFile = "";
-        private ArrayList manipulatedFile = new ArrayList();
-        public static bool Plist = false;
-        private ArrayList keepthese = new ArrayList();
-        private ArrayList parsedXML = new ArrayList();
-        private ArrayList reservedWords = new ArrayList() { "SERVER", "USE_SERVER", "VENDOR" };
-        public static Parser Pars = new Parser();
-        LicenseParser cleaner = new LicenseParser();
+        private String licenseFileName = ""; // stores name of file which was opened for default save name
+        private string cleanFile = ""; // stores parsed text in block form
+        private ArrayList manipulatedFile = new ArrayList(); // stores processed text from InputParser to pass to LicenseParser
+        private ArrayList keepThese = new ArrayList(); // stores list of lines of parsed text
+        private LicenseParser parser = new LicenseParser(); // used to actually execute parsing
 
-        public Form1()
+        public MainMenu()
         {
             InitializeComponent();
             MinimizeBox = true;
             MaximizeBox = true;
-            Form2.StartUp();
+            PrefsForm.StartUp();
         }
 
         private void displayStatus(string message)
@@ -39,8 +31,10 @@ namespace LicenseParser
             statusLabel.Text = message;
         }
 
-        private void open_Click_1(object sender, EventArgs e)               //creates a default Windows open window and writes the data from the selected file into the input text box when the
-        {                                                                   //open button is pressed. The name of the file is stored in licenseFileName, but does not expose the location of the file.
+        //creates a default Windows open window and writes the data from the selected file into the input text box when the
+        //open button is pressed. The name of the file is stored in licenseFileName, but does not expose the location of the file.
+        private void open_Click_1(object sender, EventArgs e)
+        {                             
             OpenFileDialog openDialog = new OpenFileDialog();
             openDialog.Filter = "License Files | *.lic|Text Files | *.txt";
             openDialog.ShowDialog();
@@ -49,7 +43,7 @@ namespace LicenseParser
             {
                 using (StreamReader reader = new StreamReader(openDialog.FileName))
                 {
-                    uncleanFile.Text = reader.ReadToEnd();
+                    rawFile.Text = reader.ReadToEnd();
                     licenseFileName = openDialog.SafeFileName;
                     reader.Close();
                 }
@@ -76,20 +70,20 @@ namespace LicenseParser
             displayStatus("Cleaned file saved.");
         }
 
-        private void clean_Click(object sender, EventArgs e)
+        private void parse_Click(object sender, EventArgs e)
         {
-            manipulatedFile = Pars.Parse(uncleanFile.Text);
+            manipulatedFile = InputParser.Parse(rawFile.Text);
             FlexNetWords.ResetReservedWords();
             cleanFile = "";
             cleanedFile.Text = "";
             try
             {
-                keepthese = cleaner.CleanedLic(manipulatedFile);
+                keepThese = parser.CleanedLic(manipulatedFile);
             }
             catch (LicensesNotFoundException lnfe)
             {
                 var result = MessageBox.Show(lnfe.Message + " Would you like to set the file path for the XML lookup file now?" +
-                    " The path can be set at any time via Edit > Preferences, but you will not be able to clean any files" +
+                    " The path can be set at any time via Edit > Preferences, but you will not be able to parse any files" +
                     " without having a valid XML file path set. If you would like more details, please see the help link " +
                     "under Help > Help Documentation.", 
                     "File Could Not Be Cleaned", MessageBoxButtons.YesNo);
@@ -101,7 +95,7 @@ namespace LicenseParser
                     openDialog.ShowDialog();
                     if (!string.IsNullOrEmpty(openDialog.FileName))
                     {
-                        Form2.SetXML(openDialog.FileName);
+                        PrefsForm.SetXML(openDialog.FileName);
                         displayStatus("XML selected.");
                     }
                 }
@@ -111,17 +105,17 @@ namespace LicenseParser
             {
                 var result = MessageBox.Show(ile.Message, "Invalid License File", MessageBoxButtons.OK);
             }
-            if (keepthese.Count >= 1)
+            if (keepThese.Count >= 1)
             {
                 int start = 0;
                 int pos = 0;
-                while (start * 1000 <= keepthese.Count)                                     //checks to make sure the loop will not be starting past the end of the file,
+                while (start * 1000 <= keepThese.Count)                                     //checks to make sure the loop will not be starting past the end of the file,
                 {                                                                           //then uses a for loop to break the ArrayList into chunks of a thousand lines each and places the chunks in a holder string. 
                     for (pos = (start * 1000); pos < ((start + 1) * 1000); pos++)           //(The last chunk will not be 1000 lines, it will be the remainder of lines left after the other chunks.)
                     {                                                                       //Adds a newLine character after each line as the for loop executes. After each chunk is created,
-                        if (pos < keepthese.Count)                                          //it is added to the existing text in the output TextBox and the holder string is reset.
+                        if (pos < keepThese.Count)                                          //it is added to the existing text in the output TextBox and the holder string is reset.
                         {
-                            cleanFile += keepthese[pos] + Environment.NewLine;
+                            cleanFile += keepThese[pos] + Environment.NewLine;
                         }
                     }
                     cleanedFile.Text += cleanFile;
@@ -141,7 +135,7 @@ namespace LicenseParser
             {
                 using (StreamReader reader = new StreamReader(openDialog.FileName))
                 {
-                    uncleanFile.Text = reader.ReadToEnd();
+                    rawFile.Text = reader.ReadToEnd();
                     licenseFileName = openDialog.SafeFileName;
                 }
                 displayStatus("File opened.");
@@ -271,7 +265,7 @@ namespace LicenseParser
 
         private void preferences_Click_1(object sender, EventArgs e)
         {
-            Form2 preferencesForm = new Form2();
+            PrefsForm preferencesForm = new PrefsForm();
             RegistryKey rkHKCU = Registry.CurrentUser.OpenSubKey("Software");
             if (!rkHKCU.GetSubKeyNames().Contains("MDi"))
             {

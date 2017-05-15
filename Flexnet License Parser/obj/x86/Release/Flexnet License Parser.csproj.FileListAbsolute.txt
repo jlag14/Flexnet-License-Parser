@@ -3,8 +3,6 @@ C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Pars
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\bin\Release\Flexnet-License-Parser.exe
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\bin\Release\Flexnet-License-Parser.pdb
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\Flexnet License Parser.csprojResolveAssemblyReference.cache
-C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseParser.Form1.resources
-C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseParser.Form2.resources
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseParser.Properties.Resources.resources
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\Flexnet License Parser.csproj.GenerateResource.Cache
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\Flexnet-License-Parser.TrustInfo.xml
@@ -12,3 +10,5 @@ C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Pars
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\Flexnet-License-Parser.application
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\Flexnet-License-Parser.exe
 C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\Flexnet-License-Parser.pdb
+C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseParser.MainMenu.resources
+C:\Users\jlagnese\Documents\CMSC 447\Flexnet-License-Parser\Flexnet License Parser\obj\x86\Release\LicenseParser.PrefsForm.resources

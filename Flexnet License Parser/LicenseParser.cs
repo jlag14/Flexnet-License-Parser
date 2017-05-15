@@ -9,7 +9,7 @@ namespace LicenseParser
     public class LicenseParser
     {
         public static int newIndex = 0;
-
+        private bool plist = false;
         // The heavy lifter of the parser -- parses our processed input text into LicenseChunks, which contain
         // the full details of each parsed license
         public ArrayList CleanedLic(ArrayList parsedFile)
@@ -18,17 +18,17 @@ namespace LicenseParser
             // FOR FUTURE REFERENCE: SHOULD DEFINE # OF RESERVED WORDS AS STATIC CONSTANT
             if (parsedFile.Count > 3)
             {
-                ArrayList lics = Form1.Pars.Licenses(); // list of valid licenses as found in our lookup XML
+                ArrayList lics = InputParser.Licenses(); // list of valid licenses as found in our lookup XML
                 ArrayList chunks = new ArrayList(); // our list of fully parsed and documented licenses; will be our returned variable
 
                 // check if XML read worked
                 if (lics.Count == 0)
                 {
-                    if (Form2.LicenseMetaXMLPath.Equals(""))
+                    if (PrefsForm.LicenseMetaXMLPath.Equals(""))
                     {
                         throw new LicensesNotFoundException("Error: No path to the XML license lookup file has been specified.");
                     }
-                    throw new LicensesNotFoundException("Error: could not find valid XML file at location " + Form2.LicenseMetaXMLPath + " .");
+                    throw new LicensesNotFoundException("Error: could not find valid XML file at location " + PrefsForm.LicenseMetaXMLPath + " .");
                 }
 
                 // Check if junk text accidentally got typed at the start of the file; see if we can remove it and still
@@ -45,7 +45,7 @@ namespace LicenseParser
                 }
                 catch (ArgumentOutOfRangeException e)
                 {
-                    Form1.displayFailure("This license file does not begin with the mandatory SERVER, USE_SERVER, and VENDOR lines, and is therefore invalid.");
+                    MainMenu.displayFailure("This license file does not begin with the mandatory SERVER, USE_SERVER, and VENDOR lines, and is therefore invalid.");
                     return new ArrayList();
                 }
 
@@ -57,7 +57,7 @@ namespace LicenseParser
                     if (FlexNetWords.StartsWithComment(trimmedLine))
                     {
                         // save comments if set in prefs
-                        if (Form2.KeepComments)
+                        if (PrefsForm.KeepComments)
                         {
                             chunks.Add(line);
                         }
@@ -71,7 +71,7 @@ namespace LicenseParser
                     else
                     {
                         // save line breaks if requested
-                        if (Form2.KeepBreaks)
+                        if (PrefsForm.KeepBreaks)
                         {
                             if (String.IsNullOrWhiteSpace(line))
                             {
@@ -143,9 +143,9 @@ namespace LicenseParser
                             // handle plist
                             if (text.Contains("INCREMENT PLIST"))
                             {
-                                if (!Form1.Plist)
+                                if (!plist)
                                 {
-                                    Form1.Plist = true;
+                                    plist = true;
                                 }
                                 else
                                 {
@@ -362,7 +362,7 @@ namespace LicenseParser
             }
             else
             {
-                Form1.displayFailure("Error: The file is either blank or too short and cannot be cleaned.");
+                MainMenu.displayFailure("Error: The file is either blank or too short and cannot be cleaned.");
                 return new ArrayList();
             }
         }

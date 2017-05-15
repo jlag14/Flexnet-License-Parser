@@ -7,7 +7,7 @@ namespace LicenseParser
 {
     static class Program
     {
-        public static Form1 obj;
+        public static MainMenu obj;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +16,7 @@ namespace LicenseParser
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            obj = new Form1();
+            obj = new MainMenu();
             Application.Run(obj);
         }
     }

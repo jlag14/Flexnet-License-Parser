@@ -49,7 +49,7 @@ namespace LicenseParser
         // Checks if a line starts with a comment
         public static bool StartsWithComment(String line)
         {
-            if (line.StartsWith("#") || line.StartsWith(Form2.CommentChar.ToString()))
+            if (line.StartsWith("#") || line.StartsWith(PrefsForm.CommentChar.ToString()))
             {
                 return true;
             }

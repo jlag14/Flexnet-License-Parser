@@ -1,6 +1,6 @@
 ﻿namespace LicenseParser
 {
-    partial class Form1
+    partial class MainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.uncleanFile = new System.Windows.Forms.TextBox();
+            this.rawFile = new System.Windows.Forms.TextBox();
             this.open = new System.Windows.Forms.Button();
             this.cleanedFile = new System.Windows.Forms.TextBox();
             this.clearBottom = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
-            this.clean = new System.Windows.Forms.Button();
+            this.parse = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuOpen = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,27 +61,27 @@
             this.status.SuspendLayout();
             this.SuspendLayout();
             // 
-            // uncleanFile
+            // rawFile
             // 
-            this.uncleanFile.AcceptsReturn = true;
-            this.uncleanFile.AcceptsTab = true;
-            this.uncleanFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.rawFile.AcceptsReturn = true;
+            this.rawFile.AcceptsTab = true;
+            this.rawFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uncleanFile.Location = new System.Drawing.Point(40, 71);
-            this.uncleanFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.uncleanFile.MaxLength = 1000000;
-            this.uncleanFile.Multiline = true;
-            this.uncleanFile.Name = "uncleanFile";
-            this.uncleanFile.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.uncleanFile.Size = new System.Drawing.Size(899, 249);
-            this.uncleanFile.TabIndex = 0;
-            this.uncleanFile.WordWrap = false;
+            this.rawFile.Location = new System.Drawing.Point(40, 71);
+            this.rawFile.Margin = new System.Windows.Forms.Padding(4);
+            this.rawFile.MaxLength = 1000000;
+            this.rawFile.Multiline = true;
+            this.rawFile.Name = "rawFile";
+            this.rawFile.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.rawFile.Size = new System.Drawing.Size(899, 249);
+            this.rawFile.TabIndex = 0;
+            this.rawFile.WordWrap = false;
             // 
             // open
             // 
             this.open.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.open.Location = new System.Drawing.Point(344, 329);
-            this.open.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.open.Margin = new System.Windows.Forms.Padding(4);
             this.open.Name = "open";
             this.open.Size = new System.Drawing.Size(94, 29);
             this.open.TabIndex = 1;
@@ -99,7 +99,7 @@
             this.cleanedFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cleanedFile.Location = new System.Drawing.Point(40, 394);
-            this.cleanedFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cleanedFile.Margin = new System.Windows.Forms.Padding(4);
             this.cleanedFile.MaxLength = 1000000;
             this.cleanedFile.Multiline = true;
             this.cleanedFile.Name = "cleanedFile";
@@ -111,7 +111,7 @@
             // clearBottom
             // 
             this.clearBottom.Location = new System.Drawing.Point(600, 552);
-            this.clearBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clearBottom.Margin = new System.Windows.Forms.Padding(4);
             this.clearBottom.Name = "clearBottom";
             this.clearBottom.Size = new System.Drawing.Size(0, 0);
             this.clearBottom.TabIndex = 4;
@@ -122,7 +122,7 @@
             // 
             this.save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.save.Location = new System.Drawing.Point(344, 662);
-            this.save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.save.Margin = new System.Windows.Forms.Padding(4);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(94, 29);
             this.save.TabIndex = 5;
@@ -132,19 +132,19 @@
             this.save.UseVisualStyleBackColor = true;
             this.save.Click += new System.EventHandler(this.save_Click_1);
             // 
-            // clean
+            // parse
             // 
-            this.clean.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.clean.Location = new System.Drawing.Point(535, 329);
-            this.clean.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.clean.Name = "clean";
-            this.clean.Size = new System.Drawing.Size(94, 29);
-            this.clean.TabIndex = 6;
-            this.clean.Text = "Parse";
-            this.toolTip1.SetToolTip(this.clean, "When clicked, cleans the text in the upper text box using\r\npreviously defined lic" +
+            this.parse.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.parse.Location = new System.Drawing.Point(535, 329);
+            this.parse.Margin = new System.Windows.Forms.Padding(4);
+            this.parse.Name = "parse";
+            this.parse.Size = new System.Drawing.Size(94, 29);
+            this.parse.TabIndex = 6;
+            this.parse.Text = "Parse";
+            this.toolTip1.SetToolTip(this.parse, "When clicked, cleans the text in the upper text box using\r\npreviously defined lic" +
         "ense properties.");
-            this.clean.UseVisualStyleBackColor = true;
-            this.clean.Click += new System.EventHandler(this.clean_Click);
+            this.parse.UseVisualStyleBackColor = true;
+            this.parse.Click += new System.EventHandler(this.parse_Click);
             // 
             // menuStrip1
             // 
@@ -315,7 +315,7 @@
             // 
             this.copyButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.copyButton.Location = new System.Drawing.Point(535, 662);
-            this.copyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.copyButton.Margin = new System.Windows.Forms.Padding(4);
             this.copyButton.Name = "copyButton";
             this.copyButton.Size = new System.Drawing.Size(94, 29);
             this.copyButton.TabIndex = 11;
@@ -330,7 +330,7 @@
             this.toolTip1.InitialDelay = 500;
             this.toolTip1.ReshowDelay = 100;
             // 
-            // Form1
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -338,20 +338,20 @@
             this.ClientSize = new System.Drawing.Size(980, 751);
             this.Controls.Add(this.copyButton);
             this.Controls.Add(this.status);
-            this.Controls.Add(this.clean);
+            this.Controls.Add(this.parse);
             this.Controls.Add(this.save);
             this.Controls.Add(this.clearBottom);
             this.Controls.Add(this.cleanedFile);
             this.Controls.Add(this.open);
-            this.Controls.Add(this.uncleanFile);
+            this.Controls.Add(this.rawFile);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(4796, 2688);
             this.MinimumSize = new System.Drawing.Size(996, 788);
-            this.Name = "Form1";
+            this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Flexnet License Parser";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -366,12 +366,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox uncleanFile;
+        private System.Windows.Forms.TextBox rawFile;
         private System.Windows.Forms.Button open;
         private System.Windows.Forms.TextBox cleanedFile;
         private System.Windows.Forms.Button clearBottom;
         private System.Windows.Forms.Button save;
-        private System.Windows.Forms.Button clean;
+        private System.Windows.Forms.Button parse;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileMenu;
         private System.Windows.Forms.ToolStripMenuItem menuOpen;
