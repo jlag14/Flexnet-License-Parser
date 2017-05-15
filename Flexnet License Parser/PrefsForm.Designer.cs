@@ -462,7 +462,6 @@
             this.XMLPathBox.Name = "XMLPathBox";
             this.XMLPathBox.Size = new System.Drawing.Size(263, 22);
             this.XMLPathBox.TabIndex = 34;
-            this.XMLPathBox.TextChanged += new System.EventHandler(this.XMLPathBox_TextChanged);
             // 
             // groupBox1
             // 
