@@ -219,14 +219,16 @@ namespace LicenseParser
                                 bool added = false; // tracks whether or not we ID a given component
                                 int startIndex = text.IndexOf("COMPONENTS"); // start from COMPONENTS
 
-                                // indicates we have a 
+                                // indicates we have a single component
                                 if (text[startIndex + "COMPONENTS".Length + 1] != '\"')
                                 {
+                                    // ensure it's a single component and not a missing quote
                                     if (line.Contains("COMPONENTS") && parsedFile[i + 1].ToString().Trim().StartsWith("OPTIONS"))
                                     {
                                         added = false;
                                         mysteryCode = "";
 
+                                        // if we have 1 component just go until we hit a space
                                         while (!text[startIndex].ToString().Equals(" "))
                                         {
                                             // handle the EOL character and the tab when COMPONENTS list wraps around
@@ -336,6 +338,7 @@ namespace LicenseParser
                                     }
                                 }
                             }
+                            // Remove duplicate components in the list
                             ArrayList removes = comps;
                             foreach (String comp in comps)
                             {
