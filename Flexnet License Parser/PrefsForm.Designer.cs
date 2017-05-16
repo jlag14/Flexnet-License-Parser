@@ -452,9 +452,11 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(2, 205);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 17);
+            this.label1.Size = new System.Drawing.Size(124, 17);
             this.label1.TabIndex = 35;
-            this.label1.Text = "LicenseMeta.xml Path:";
+            this.label1.Text = "Lookup XML Path:";
+            this.toolTip1.SetToolTip(this.label1, "The path to the XML lookup file which should be used during \r\nparsing. This file " +
+        "is needed to associate license feature codes \r\nwith license names.");
             // 
             // XMLPathBox
             // 
@@ -462,6 +464,7 @@
             this.XMLPathBox.Name = "XMLPathBox";
             this.XMLPathBox.Size = new System.Drawing.Size(263, 22);
             this.XMLPathBox.TabIndex = 34;
+            this.toolTip1.SetToolTip(this.XMLPathBox, "The full path of the license lookup XML file.");
             // 
             // groupBox1
             // 
