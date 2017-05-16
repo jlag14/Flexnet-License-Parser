@@ -323,7 +323,7 @@ namespace LicenseParser
 
             licenseMetaXMLPath = XMLPathBox.Text;
 
-            MainMenu.displayFailure("Preferences saved.");
+            MessageBox.Show("Preferences saved.");
         }
 
         // Needed to save XML rename from parse click failure without re-saving everything

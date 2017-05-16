@@ -52,7 +52,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.preferences = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.about = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpOption = new System.Windows.Forms.ToolStripMenuItem();
             this.status = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.copyButton = new System.Windows.Forms.Button();
@@ -127,8 +127,8 @@
             this.save.Size = new System.Drawing.Size(94, 29);
             this.save.TabIndex = 5;
             this.save.Text = "Save...";
-            this.toolTip1.SetToolTip(this.save, "Saves the text in the lower text box as a .lic or a .txt file\r\nto a location of t" +
-        "he user\'s choosing.");
+            this.toolTip1.SetToolTip(this.save, "Saves the text in the lower text box as a .lic file\r\nto a location of the user\'s " +
+        "choosing.");
             this.save.UseVisualStyleBackColor = true;
             this.save.Click += new System.EventHandler(this.save_Click_1);
             // 
@@ -141,7 +141,7 @@
             this.parse.Size = new System.Drawing.Size(94, 29);
             this.parse.TabIndex = 6;
             this.parse.Text = "Parse";
-            this.toolTip1.SetToolTip(this.parse, "When clicked, cleans the text in the upper text box using\r\npreviously defined lic" +
+            this.toolTip1.SetToolTip(this.parse, "When clicked, parses the text in the upper text box using\r\npreviously defined lic" +
         "ense properties.");
             this.parse.UseVisualStyleBackColor = true;
             this.parse.Click += new System.EventHandler(this.parse_Click);
@@ -282,18 +282,18 @@
             // helpMenu
             // 
             this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.about});
+            this.helpOption});
             this.helpMenu.Name = "helpMenu";
             this.helpMenu.Size = new System.Drawing.Size(53, 24);
             this.helpMenu.Text = "Help";
             // 
-            // about
+            // helpOption
             // 
-            this.about.Name = "about";
-            this.about.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.about.Size = new System.Drawing.Size(176, 26);
-            this.about.Text = "About";
-            this.about.Click += new System.EventHandler(this.about_Click);
+            this.helpOption.Name = "helpOption";
+            this.helpOption.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.helpOption.Size = new System.Drawing.Size(181, 26);
+            this.helpOption.Text = "Help";
+            this.helpOption.Click += new System.EventHandler(this.help_Click);
             // 
             // status
             // 
@@ -382,7 +382,7 @@
         private System.Windows.Forms.ToolStripMenuItem cut;
         private System.Windows.Forms.ToolStripMenuItem copy;
         private System.Windows.Forms.ToolStripMenuItem paste;
-        private System.Windows.Forms.ToolStripMenuItem about;
+        private System.Windows.Forms.ToolStripMenuItem helpOption;
         private System.Windows.Forms.ToolStripMenuItem undo;
         private System.Windows.Forms.ToolStripMenuItem selectAll;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;

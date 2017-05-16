@@ -45,7 +45,7 @@ namespace LicenseParser
                 }
                 catch (ArgumentOutOfRangeException e)
                 {
-                    MainMenu.displayFailure("This license file does not begin with the mandatory SERVER, USE_SERVER, and VENDOR lines, and is therefore invalid.");
+                    MainMenu.DisplayFailure("This license file does not begin with the mandatory SERVER, USE_SERVER, and VENDOR lines, and is therefore invalid.");
                     return new ArrayList();
                 }
 
@@ -362,7 +362,7 @@ namespace LicenseParser
             }
             else
             {
-                MainMenu.displayFailure("Error: The file is either blank or too short and cannot be cleaned.");
+                MainMenu.DisplayFailure("Error: The file is either blank or too short and cannot be cleaned.");
                 return new ArrayList();
             }
         }
