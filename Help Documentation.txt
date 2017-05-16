@@ -1,0 +1,87 @@
+The Application
+	Flexnet License Parser is an app intended to reformat licenses into their proper format. Currently, the program is only able to format .txt and .lic files using the Flexera FlexNet formatting system. “PACKAGEs” are assumed to be standalone and “INCREMENTs” are checked before they are declared standalone.
+
+The Parsing Process
+	When the user selects the “Parse” button in this application, the text in the upper text box of the main application window is first parsed into a long array that stores each line of text as an individual String text element. The program then checks if the file begins with the mandatory “SERVER”, “USE_SERVER”, and “VENDOR” lines, all of which must be found at the beginning of the file in that respective order for the parsing to commence. Once begun, the parsing method checks stored user preferences to determine what information to pull from each license block in the license file. More information on what sorts of user preferences are available for parsing and documentation are available below in the Preferences section. The parser also performs some minor validation on the license blocks, checking for unmatched quotes and giving an estimate of where the mismatch was found. Once the original license file has been completely parsed, the parsed file is printed in the lower text box on the main window.
+
+Opening a File
+The user can open a file into the upper text box using the “Open” button on the main application window as well as through clicking the “Open” option on the “File” menu on the main window. The hotkey “Ctrl + o” can also be used to quickly open a file.
+Regardless of which way the user chooses to open a file, a window appears that allows the user to open a .txt or .lic file. Once a file is chosen and opened, it appears in the upper text box of the program. Users should note that by default, the “Open File” window will only show .txt files; if a .lic file is to be selected, the filter at the lower-right hand corner of the window must be changed from “Text Files (.txt)” to “License Files (.lic)”.
+Note: An alternative way of opening text in the upper window is to copy/paste text directly into the window using either the copy/paste hotkeys or the paste control on the form (see “Clipboard Functions” for more information).
+
+Saving a File
+The user can save a file by using the “Save” button on the main application window as well as through clicking the “Save As” option on the “File” menu on the main window. The hotke “Ctrl + S” can also be used to quickly bring up the save prompt. Files can currently only be saved as .lic files.
+
+Clipboard Functions
+	The License Cleaner program includes the ability to copy/paste text from either text box to the clipboard in various ways. By clicking the “Copy” button located on the main form, the user copies all of the text in the lower text box to the clipboard. The text does not need to be highlighted; clicking this button will copy all of the text in the lower text box, regardless of what the user has highlighted. If the user wishes to copy and/or paste a specific section from the lower text box or anything from the upper text box, there are “Copy”, “Paste”, and “Cut” options available for use via the “Edit” menu on the main form. 
+“Edit” Menu Items
+“Copy” copies whatever text the user has highlighted (in either text box) to the clipboard and has a hotkey of “Ctrl + C” for quicker usage. 
+The “Paste” command under the “Edit” menu pastes whatever data is on the clipboard to the position the user has selected. This command only works in the text boxes of the main form, and has a hotkey of “Ctrl + V”. 
+The “Cut” command copies whatever text the user has highlighted to the clipboard and then deletes it. It has a hotkey of “Ctrl + X”.
+“Select All” selects all the text in whichever text box the user has selected. Its hotkey is ”Ctrl + A”.
+“Undo” undoes the last action taken by the user. !!WARNING!! – “Undo” will only revert back by one action, and any action undone cannot be redone unless manually redone by the user.
+Preferences
+Selecting “Preferences” will open the Preferences window for the application. This window allows the user to change various aspects of the License Cleaner program, such as the information to be included in program-made comments and whether or not to add headers to these comments. The user should also note that this window takes the foremost focus in the program when it is opened, meaning that the main form cannot be accessed until either the “Save” or “Cancel” button is selected on the form. The following section describes the options and controls present on the Preferences form, although the user should note that in-depth tooltips are present for every option and control in the program itself, and that this section is recommended to be used solely as a last resort.
+“Save” Button
+The “Save” button saves the current state of all of the options on the preferences form to the computer’s CURRENT_USER registry. The full path of the save is as follows (and can also be found by hovering one’s mouse over the “Save” button on the preferences form):
+Computer  HKEY_CURRENT_USER  Software  MDi  Flexnet License Parser  1.0  Prefs
+Once the “Save” button has been clicked, the preferences form automatically closes and the main form displays the text “Preferences saved.” on the status bar located at the bottom of the main form.
+Note: The save path for Preferences cannot be altered and is native to each user (as it is under HKEY_CURRENT_USER rather than HKEY_LOCAL_MACHINE). 
+“Cancel” Button
+This button immediately exits the Preferences form, cancelling any changes the user has made (including pressing the “Reset to Default” button, as described below). When the preferences form is next opened, the settings on it will be set to their most recently saved values. If no settings have yet been saved for the preferences under this user, the default values will be used.
+“Reset to Default” Button
+This button resets all of the options on the preferences form to their default values. The user should note that simply clicking this button does not save the options as their default values. In order to save this reset, the user must select the save button. If the user wishes to cancel this reset, he/she can simply click the “Cancel” button on the form.
+Note: The default values for the form are not listed anywhere in the License Cleaner application. If the user wishes to view them, he/she must select the “Reset to Default” button, regardless of whether he/she plans to save the preferences as their default values.
+Preferences Options
+-	Keep Existing Comments
+When this box is checked, any lines that are comments in the text in the upper text box on the main form will be preserved in the output in the lower text box. Lines prefixed with “#” signs are read as comments by the License Cleaner application (as per FlexNet text formatting), so the user may have to convert the comment characters in his/her license file to “#”s in order for this option to work properly. It is recommended that this setting be checked correspondingly with the “Keep Existing Line Breaks” option for aesthetic reasons (see below).
+
+-	Keep Existing Line Breaks
+When this box is checked, any linebreaks (blank lines) in the input text file will be preserved in the output text. It is recommended that this setting be either checked or unchecked according to the state of the “Keep Existing Comments” option due to the fact that blank lines used to separate comments from licenses in the input file will inadvertently create large gaps between the licenses in the output file if “Keep Existing Comments” is left unchecked. (If the reverse is true, where linebreaks are not preserved but comments are, the output file will appear cramped.)
+-	Header Character
+The user can specify which character will be used for comment headers and footers here. (Headers and footers will be inserted above and below documentation blocks if the Add Comment Headers box is checked).
+
+-	Comment Character
+The user can specify which character will be used for comment/documentation lines in this text box. When Keep Existing Comments is selected, the application will keep any lines beginning with this character or the character ‘#’. For this reason it is recommended that a letter or number is not used as the comment character if the Keep Existing Comments option is enabled.
+
+-	Lookup XML Path
+This is the explicit path to the lookup XML file to be used in parsing. The XML file must have licenses listed with FeatureCode and ProductName nodes in the following format:
+<SomeNodeName>
+       <FeatureCode>MyFeatureCode</FeatureCode
+       <ProductName>MyName</ProductName>
+</SomeNodeName>
+Since license files only give the feature codes for the licenses included within, the parser cross-references with an XML lookup file to find the name of the license associated with a given feature code. Our provided XML lookup file, LicenseMeta.xml, currently only contains information for Autodesk licenses from 2011-2017, which may or may not be an effective lookup file for the user. The user can examine this “LicenseMeta.xml” file for more details on the format of this lookup file. 
+
+-	Add License Documentation
+If this box is left unchecked, the parser will not add any documentation to the file. In other words, this means that no comments will be generated.
+
+-	Include Feature Types
+When checked, comments blocks will include the feature type of the detected license – e.g. “Subscription Package,” “Standalone,” or “Legacy.”
+
+-	Include License Types
+When checked, comment blocks will contain information about whether a license is a Perpetual or Term license.
+
+-	Include Number of Seats
+When checked, comment blocks will include the number of seats available for the given license.
+
+-	List Sub-Components
+When checked, the parser will attempt to list the sub-components of each license as found in the COMPONENT section of each block, cross referencing each code found with the lookup XML to try and find the matching name for each component.
+
+-	Leading Comment Space
+The number of spaces between a comment character and a documentation line, i.e. the space after the # symbol in the following line:
+#    This is a sample comment line.
+
+-	Add Spaces Before Comments
+When checked, spaces will be prepended to comment lines.
+
+-	Number of Spaces
+The number of spaces before comment lines, i.e. the number of spaces before the # symbol in the following line:
+    # This is a sample comment line.
+
+-	Add Comment Headers
+When checked, allows comment header and footer lines to be generated with the specified header character. These lines are mainly for readability and aesthetics, and have no bearing on any information collected and documented by the parser.
+
+-	Header Length (Variable vs Fixed)
+Adjusts the header length depending on which option is selected. When the user selects Fixed length headers, the user is able to specify the exact number of header characters used in the header/footer lines. When Variable length headers are selected, the parser will attempt to dynamically set the length of headers for its comment sections based on the size of the content included.
+
+Any issues with this document can be reported via the “Issues” section of our GitHub page.
